@@ -124,7 +124,7 @@
 
 
 
-  <title>Ruihou Blog - 一个逐渐脱离高级趣味的油腻程序猿</title>
+  <title>Ruihou Blog</title>
   
 
 
@@ -367,165 +367,28 @@
       
         
           
-            <p>tags:</p>
-<ul>
-<li>Markdown</li>
-<li>标记性语言</li>
-</ul>
-<p>categories:</p>
-<ul>
-<li>技术</li>
-</ul>
-<hr>
-<ul>
-<li>闲得发慌，抽出时间学习以下 <strong>Markdown</strong> 这门标记语言，于是就有了这篇文章了。</li>
-<li>编辑器直接使用 <strong>Visual Studio Code</strong> 就可以愉快的一边码字，一边预览效果了，简直不要太开心。</li>
-<li><strong>Markdown</strong> 属于标记性语言,语法超级简单，入手超快。</li>
-</ul>
-<hr>
-<h2 id="Markdown-语法手册"><a href="#Markdown-语法手册" class="headerlink" title="Markdown 语法手册"></a>Markdown 语法手册</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>一般来说，四级标题足够文档的使用，这个可以通过简单的 <em>#</em> 实现，别的方法就不介绍了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一级标题</span></span><br><span class="line"><span class="comment">## 二级标题</span></span><br><span class="line"><span class="comment">### 三级标题</span></span><br><span class="line"><span class="comment">#### 四级标题</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="粗体斜体"><a href="#粗体斜体" class="headerlink" title="粗体斜体"></a>粗体斜体</h3><pre><code>粗体: **粗体**
-斜体: *斜体*
-</code></pre><p>粗体: <strong>粗体</strong><br>斜体: <em>斜体</em></p>
-<hr>
-<h3 id="段落和换行"><a href="#段落和换行" class="headerlink" title="段落和换行"></a>段落和换行</h3><ul>
-<li>第一种： 直接回车键，只能段落间只能有一个空行<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是第一段</span><br><span class="line"></span><br><span class="line">这是第二段</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这是第一段</p>
-<p>这是第二段</p>
-<ul>
-<li>第二种方法：使用 <strong>\<br></strong> 控制空行数目<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是第一段 &lt;br /&gt; &lt;br /&gt;  &lt;br /&gt;这是第二段</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这是第一段 <br> <br>  <br>这是第二段</p>
-<hr>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>可以在一行中用三个及以上的星号、减号、底线来建立分隔线，行内不能有除空格外的其他东西。</p>
-<pre><code>---
-***
-___
-</code></pre><hr>
-<hr>
-<hr>
-<h3 id="文字引用"><a href="#文字引用" class="headerlink" title="文字引用"></a>文字引用</h3><p>使用&gt;表示文字引用,但是我这个不知道为什么不使用&gt;也可以。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="string">"野火烧不尽，春风吹又生。"</span></span><br><span class="line"><span class="string">"野火烧不尽，春风吹又生。"</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>“野火烧不尽，春风吹又生。”<br>“野火烧不尽，春风吹又生。”</p>
-</blockquote>
-<hr>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h4><pre><code>这个是一个行内的`代码`
-</code></pre><p>这个是一个行内的<code>代码</code></p>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>使用四个缩进的空格代表代码块。</p>
-<pre><code># 这是一个代码块，左边有四个空格。
-int main(void){
-    prinf(&quot;hello world.\n&quot;);
-}
-</code></pre><hr>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用 *, +, -表示无序列表。</p>
-<pre><code>* 无序列表1
-+ 无序列表2
-- 无序列表3
-</code></pre><ul>
-<li>无序列表1</li>
-</ul>
-<ul>
-<li>无序列表2</li>
-</ul>
-<ul>
-<li>无序列表3</li>
-</ul>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>使用数字和点表示有序列表。</p>
-<pre><code>1. 有序列表1
-2. 有序列表2
-3. 有序列表3
-</code></pre><ol>
-<li>有序列表1</li>
-<li>有序列表2</li>
-<li>有序列表3</li>
-</ol>
-<hr>
-<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><h4 id="网址链接"><a href="#网址链接" class="headerlink" title="网址链接"></a>网址链接</h4><p>网址链接有两种形式：<strong>行内式</strong>、<strong>参考式</strong>。不管是哪一种形式，链接文字都是使用[方括号]来标记的。</p>
-<ul>
-<li>行内式<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Ruihou Blog](https://github.com/houruixiang/ruihou.github.io)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><a href="https://github.com/houruixiang/ruihou.github.io" target="_blank" rel="noopener">Ruihou Blog</a></p>
-<ul>
-<li>参考式</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这里是[Google][1]; 这个是[百度][2]; 这个是[必应][]，再来一个[谷歌][]。非常好玩的一种实现方法。</span><br><span class="line"></span><br><span class="line">[1]: https://www.google.com/</span><br><span class="line">[2]: https://www.baidu.com/</span><br><span class="line">[必应]: https://www.bing.com/</span><br><span class="line">[谷歌]: https://www.google.com/</span><br></pre></td></tr></table></figure>
-<p>这里是<a href="https://www.google.com/" target="_blank" rel="noopener">Google</a>; 这个是<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a>; 这个是<a href="https://www.bing.com/" target="_blank" rel="noopener">必应</a>，再来一个<a href="https://www.google.com/" target="_blank" rel="noopener">谷歌</a>。非常好玩的一种实现方法。</p>
-<h4 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h4><p>图片链接与上面的网址链接类似，同样有两种形式：行内式和参考式，只不过图片链接在前面加上一个感叹号!，在此不做累述。</p>
-<ul>
-<li><p>行列式</p>
-<pre><code>![序列图](http://p8hu3ca6r.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.JPG)
-![流程图](http://p8hu3ca6r.bkt.clouddn.com/%E5%BA%8F%E5%88%97%E5%9B%BE.JPG)
-</code></pre></li>
-<li><p>参考式</p>
-<pre><code>![谷歌][1]
+          tags:
 
-[1]: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png &quot;Google&quot;
-</code></pre></li>
-</ul>
-<h2 id="Markdown-进阶语法"><a href="#Markdown-进阶语法" class="headerlink" title="Markdown 进阶语法"></a>Markdown 进阶语法</h2><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><hr>
-<p>tags: [Markdown,语言]<br>categories: [技术]</p>
-<hr>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>这个超级简单好用，简直不要太开心了。一句 <code>[TOC]</code> 就可以搞定了。<br>[TOC]<br>遗憾的是，这个hexo也不支持， VS Code是可以正确支持的。</p>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>表格的话我建议使用最简便的方式，不要太复杂的表格，高级的表格有更加专业的工具。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|long_long_id|long_long_name|long_long_score|</span><br><span class="line">|    ---     |    :---:     |     ---:      |</span><br><span class="line">|    001     |     Mark     |      90       |</span><br><span class="line">|    002     |     Ford     |      80       |</span><br><span class="line">|    003     |     Alan     |      95       |</span><br></pre></td></tr></table></figure>
-<ul>
-<li>还有就是对齐了，用:对齐，:写在在—的左边就是左对齐，右边就是右对齐，两边都写就是居中。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>long_long_id</th>
-<th style="text-align:center">long_long_name</th>
-<th style="text-align:right">long_long_score</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>001</td>
-<td style="text-align:center">Mark</td>
-<td style="text-align:right">90</td>
-</tr>
-<tr>
-<td>002</td>
-<td style="text-align:center">Ford</td>
-<td style="text-align:right">80</td>
-</tr>
-<tr>
-<td>003</td>
-<td style="text-align:center">Alan</td>
-<td style="text-align:right">95</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>看样子跟网址引用很像的啊。</p>
-<pre><code>这是脚注一 [^1]
-这是脚注二 [^2]
-这是脚注三 [^3]
+Markdown
+标记性语言
 
-[^1]: 脚注一
-[^2]: 脚注二
-[^3]: 脚注三
-</code></pre><p>这是脚注一[^1]<br>这是脚注二[^2]<br>这是脚注三[^3]<br>[^1]: 脚注一<br>[^2]: 脚注二<br>[^3]: 脚注三</p>
-<p>非常遗憾，这个居然也是显示不出来啊。</p>
-<hr>
-<h3 id="序列图"><a href="#序列图" class="headerlink" title="序列图"></a>序列图</h3><p>这个在我的VS Code上面是可以正常显示的，但是在guthub pages上面就不可以显示，这个我也是没有办法了，所以最好的办法就是当成图片引用就好了，本身也不建议使用markdown代码来画图。</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
-<p><img src="http://p8hu3ca6r.bkt.clouddn.com/%E5%BA%8F%E5%88%97%E5%9B%BE.JPG" alt="序列图"></p>
-<hr>
-<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p>这个在我的VS Code上面是可以正常显示的，但是在guthub pages上面就不可以显示，这个我也是没有办法了，所以最好的办法就是当成图片引用就好了，本身也不建议使用markdown代码来画图。</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end: End</span><br><span class="line">op1=&gt;operation: My Operation</span><br><span class="line">sub1=&gt;subroutine: My Subroutine</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">io=&gt;inputoutput: catch something...</span><br><span class="line">st-&gt;op1-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op1</span><br></pre></td></tr></table></figure>
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">e=&gt;end: End</span><br><span class="line">op1=&gt;operation: My Operation</span><br><span class="line">sub1=&gt;subroutine: My Subroutine</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">io=&gt;inputoutput: catch something...</span><br><span class="line">st-&gt;op1-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op1</span><br></pre></td></tr></table></figure>
-<p><img src="http://p8hu3ca6r.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.JPG" alt="流程图"></p>
+categories:
 
-          
+技术
+
+
+
+闲得发慌，抽出时间学习以下 Markdown 这门标记语言，于是就有了这篇文章了。
+编辑器直接使用 Visual Studio Code 就可以愉快的一边码字，一边预览效果了，简直不要太开心。
+Markdown 属于
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/10/Markdown 简易入门教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -643,10 +506,17 @@ int main(void){
       
         
           
-            <p>主要是为了学习使用，这个博客的内容不限于技术，也包括自己日常吐槽，我想坚持下去，能够<br>对自己的生活，工作，学习等不断的记录，改变自己的生活，希望可以帮助一些人。</p>
-<p><img src="http://p8hu3ca6r.bkt.clouddn.com/leetcode.jpg" alt="image"></p>
+          主要是为了学习使用，这个博客的内容不限于技术，也包括自己日常吐槽，我想坚持下去，能够对自己的生活，工作，学习等不断的记录，改变自己的生活，希望可以帮助一些人。
+
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/09/name/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -764,17 +634,15 @@ int main(void){
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/09/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
