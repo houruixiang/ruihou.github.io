@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[完善博客实用功能]]></title>
+    <url>%2F2018%2F05%2F12%2FMarkdown%20improve%2F</url>
+    <content type="text"><![CDATA[既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签和分类添加标签第一次配置，输入命令： hexo new page tags 确认站点配置文件里有tag_dir: tags确认主题配置文件里有tags: /tags编辑站点的source/tags/index.md，添加以下代码 title: tags date: 2015-10-20 06:49:50 type: &quot;tags&quot; comments: false 添加分类第一次配置，输入命令： hexo new page categories 确认站点配置文件里有category_dir: categories确认主题配置文件里有categories: /categories编辑站点的source/categories/index.md，添加以下代码 title: categories date: 2015-10-20 06:49:50 type: &quot;categories&quot; comments: false 每当创建新的md文件时候，输入 hexo new newfile.md 然后在生成文件的开头添加12345678---title: title #文章標題date: 2016-06-01 23:47:44 #文章生成時間categories: "Hexo教程" #文章分類目錄 可以省略tags: #文章標籤 可以省略 - 标签1 - 标签2--- 设置about字数统计和时间统计在根目录下安装 hexo-wordcount,运行： npm install hexo-wordcount --save 然后在主题的配置文件_config.yml中，配置如下：123456# Post wordcount display settings# Dependencies: https://github.com/willin/hexo-wordcountpost_wordcount:item_text: truewordcount: truemin2read: true 在每篇文章末尾统一添加“本文结束”标记具体实现方法 hexo之next主题个性化配置详细教程 中的章节6。 点击出现💗效果在网址 http://7u2ss1.com1.z0.glb.clouddn.com/love.js将里面的代码复制一下，新建 love.js 文件并且将代码复制进去，然后保存。将love.js文件放到路径/themes/next/source/js/src里面，然后打开\themes\next\layout\_layout.swig文件,在文件最末尾添加以下代码：12&lt;!-- 页面点击小红心 --&gt;&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 动态粒子背景这个现在非常流行，html5最新支持的canvas功能。修改配置文件 打开 /next/_config.yml 在里面添加如下码：(可以放在最后面)。 1234# background settings# add canvas-nest effect# see detail from https://github.com/hustcc/canvas-nest.jscanvas_nest: true 到此就结束了，运行 hexo clean，然后运行 hexo g -d,完成部署就可以了。 Gitment评论这个是个比较简单的过程，不需要 hexo next主题集成gitment评论系统 里面这么复杂的操作，只需要第一步和第二步就可以完成整个评论系统了。需要特别注意的是不要使用中文命名md文件啊，不然会显示“初始化页面失败的”，这个真的是血的教训啊。 参考文献 hexo+github教程之三：hexo next主题配置 hexo之next主题个性化配置详细教程 hexo next主题集成gitment评论系统]]></content>
+      <categories>
+        <category>实用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>个性化配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown 简易入门教程]]></title>
+    <url>%2F2018%2F05%2F10%2FMarkdown%2F</url>
+    <content type="text"><![CDATA[闲得发慌，抽出时间学习以下 Markdown 这门标记语言，于是就有了这篇文章了。 编辑器直接使用 Visual Studio Code 就可以愉快的一边码字，一边预览效果了，简直不要太开心。 Markdown 属于标记性语言,语法超级简单，入手超快。 Markdown 语法手册标题一般来说，四级标题足够文档的使用，这个可以通过简单的 # 实现，别的方法就不介绍了。 1234# 一级标题## 二级标题### 三级标题#### 四级标题 粗体斜体粗体: **粗体** 斜体: *斜体* 粗体: 粗体斜体: 斜体 段落和换行 第一种： 直接回车键，只能段落间只能有一个空行123这是第一段这是第二段 这是第一段 这是第二段 第二种方法：使用 \ 控制空行数目1这是第一段 &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;这是第二段 这是第一段 这是第二段 分割线可以在一行中用三个及以上的星号、减号、底线来建立分隔线，行内不能有除空格外的其他东西。 --- *** ___ 文字引用使用&gt;表示文字引用,但是我这个不知道为什么不使用&gt;也可以。12&gt;"野火烧不尽，春风吹又生。""野火烧不尽，春风吹又生。" “野火烧不尽，春风吹又生。”“野火烧不尽，春风吹又生。” 代码行内代码这个是一个行内的`代码` 这个是一个行内的代码 代码块使用四个缩进的空格代表代码块。 # 这是一个代码块，左边有四个空格。 int main(void){ prinf(&quot;hello world.\n&quot;); } 列表无序列表使用 *, +, -表示无序列表。 * 无序列表1 + 无序列表2 - 无序列表3 无序列表1 无序列表2 无序列表3 有序列表使用数字和点表示有序列表。 1. 有序列表1 2. 有序列表2 3. 有序列表3 有序列表1 有序列表2 有序列表3 链接网址链接网址链接有两种形式：行内式、参考式。不管是哪一种形式，链接文字都是使用[方括号]来标记的。 行内式1[Ruihou Blog](https://github.com/houruixiang/ruihou.github.io) Ruihou Blog 参考式 123456这里是[Google][1]; 这个是[百度][2]; 这个是[必应][]，再来一个[谷歌][]。非常好玩的一种实现方法。[1]: https://www.google.com/[2]: https://www.baidu.com/[必应]: https://www.bing.com/[谷歌]: https://www.google.com/ 这里是Google; 这个是百度; 这个是必应，再来一个谷歌。非常好玩的一种实现方法。 图片链接图片链接与上面的网址链接类似，同样有两种形式：行内式和参考式，只不过图片链接在前面加上一个感叹号!，在此不做累述。 行列式 ![序列图](http://p8hu3ca6r.bkt.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE.JPG) ![流程图](http://p8hu3ca6r.bkt.clouddn.com/%E5%BA%8F%E5%88%97%E5%9B%BE.JPG) 参考式 ![谷歌][1] [1]: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png &quot;Google&quot; Markdown 进阶语法标签 tags: [Markdown,语言]categories: [技术] 目录这个超级简单好用，简直不要太开心了。一句 [TOC] 就可以搞定了。[TOC]遗憾的是，这个hexo也不支持， VS Code是可以正确支持的。 表格表格的话我建议使用最简便的方式，不要太复杂的表格，高级的表格有更加专业的工具。 12345|long_long_id|long_long_name|long_long_score|| --- | :---: | ---: || 001 | Mark | 90 || 002 | Ford | 80 || 003 | Alan | 95 | 还有就是对齐了，用:对齐，:写在在—的左边就是左对齐，右边就是右对齐，两边都写就是居中。 long_long_id long_long_name long_long_score 001 Mark 90 002 Ford 80 003 Alan 95 脚注看样子跟网址引用很像的啊。 这是脚注一 [^1] 这是脚注二 [^2] 这是脚注三 [^3] [^1]: 脚注一 [^2]: 脚注二 [^3]: 脚注三 这是脚注一[^1]这是脚注二[^2]这是脚注三[^3][^1]: 脚注一[^2]: 脚注二[^3]: 脚注三 非常遗憾，这个居然也是显示不出来啊。 序列图这个在我的VS Code上面是可以正常显示的，但是在guthub pages上面就不可以显示，这个我也是没有办法了，所以最好的办法就是当成图片引用就好了，本身也不建议使用markdown代码来画图。 123Alice-&gt;Bob: Hello Bob, how are you?Note right of Bob: Bob thinksBob--&gt;Alice: I am good thanks! 123Alice-&gt;Bob: Hello Bob, how are you?Note right of Bob: Bob thinksBob--&gt;Alice: I am good thanks! 流程图这个在我的VS Code上面是可以正常显示的，但是在guthub pages上面就不可以显示，这个我也是没有办法了，所以最好的办法就是当成图片引用就好了，本身也不建议使用markdown代码来画图。 123456789st=&gt;start: Starte=&gt;end: Endop1=&gt;operation: My Operationsub1=&gt;subroutine: My Subroutinecond=&gt;condition: Yes or No?io=&gt;inputoutput: catch something...st-&gt;op1-&gt;condcond(yes)-&gt;io-&gt;econd(no)-&gt;sub1(right)-&gt;op1 123456789st=&gt;start: Starte=&gt;end: Endop1=&gt;operation: My Operationsub1=&gt;subroutine: My Subroutinecond=&gt;condition: Yes or No?io=&gt;inputoutput: catch something...st-&gt;op1-&gt;condcond(yes)-&gt;io-&gt;econd(no)-&gt;sub1(right)-&gt;op1]]></content>
+      <categories>
+        <category>实用技术</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>文档编辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[个人博客第一篇]]></title>
+    <url>%2F2018%2F05%2F09%2Fname%2F</url>
+    <content type="text"><![CDATA[主要是为了学习使用，这个博客的内容不限于技术，也包括自己日常吐槽，我想坚持下去，能够对自己的生活，工作，学习等不断的记录，改变自己的生活，希望可以帮助一些人。]]></content>
+      <categories>
+        <category>扯淡</category>
+      </categories>
+      <tags>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F05%2F09%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>hello world</category>
+      </categories>
+      <tags>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+</search>
