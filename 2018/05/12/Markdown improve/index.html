@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签设置分类设置about字数统计和时间统计在根目录下安装 hexo-wordcount,运行： npm">
+<meta name="description" content="既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签和分类添加标签第一次配置，输入命令： hexo new page tags 确认站点配置文件里有ta">
 <meta name="keywords" content="博客,个性化配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="完善博客实用功能">
 <meta property="og:url" content="http://ruihou.me/2018/05/12/Markdown improve/index.html">
 <meta property="og:site_name" content="Ruihou Blog">
-<meta property="og:description" content="既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签设置分类设置about字数统计和时间统计在根目录下安装 hexo-wordcount,运行： npm">
+<meta property="og:description" content="既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签和分类添加标签第一次配置，输入命令： hexo new page tags 确认站点配置文件里有ta">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-12T13:57:49.373Z">
+<meta property="og:updated_time" content="2018-05-12T14:06:16.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="完善博客实用功能">
-<meta name="twitter:description" content="既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签设置分类设置about字数统计和时间统计在根目录下安装 hexo-wordcount,运行： npm">
+<meta name="twitter:description" content="既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：站点配置文件..\blog\_config.yml主题配置文件..\blog\themes\next\_config.yml 设置标签和分类添加标签第一次配置，输入命令： hexo new page tags 确认站点配置文件里有ta">
 
 
 
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  551
+                  773
                 </span>
               
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -433,7 +433,24 @@
 
       
         <p>既然自己搭建了一个博客系统，就要有点样子的，进行个性化的设置，好在hexo next主题实现这些功能简直不要太容易，于是就跟风来一波，主要是是通过配置两个文件实现的：<br>站点配置文件<code>..\blog\_config.yml</code><br>主题配置文件<code>..\blog\themes\next\_config.yml</code></p>
-<h2 id="设置标签"><a href="#设置标签" class="headerlink" title="设置标签"></a>设置标签</h2><h2 id="设置分类"><a href="#设置分类" class="headerlink" title="设置分类"></a>设置分类</h2><h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><h2 id="字数统计和时间统计"><a href="#字数统计和时间统计" class="headerlink" title="字数统计和时间统计"></a>字数统计和时间统计</h2><p>在根目录下安装 hexo-wordcount,运行：</p>
+<h2 id="设置标签和分类"><a href="#设置标签和分类" class="headerlink" title="设置标签和分类"></a>设置标签和分类</h2><h3 id="添加标签"><a href="#添加标签" class="headerlink" title="添加标签"></a>添加标签</h3><p>第一次配置，输入命令：</p>
+<pre><code>hexo new page tags
+</code></pre><p>确认站点配置文件里有<code>tag_dir: tags</code><br>确认主题配置文件里有<code>tags: /tags</code><br>编辑站点的<code>source/tags/index.md</code>，添加以下代码</p>
+<pre><code>title: tags
+date: 2015-10-20 06:49:50
+type: &quot;tags&quot;
+comments: false
+</code></pre><h3 id="添加分类"><a href="#添加分类" class="headerlink" title="添加分类"></a>添加分类</h3><p>第一次配置，输入命令：</p>
+<pre><code>hexo new page categories
+</code></pre><p>确认站点配置文件里有<code>category_dir: categories</code><br>确认主题配置文件里有<code>categories: /categories</code><br>编辑站点的<code>source/categories/index.md</code>，添加以下代码</p>
+<pre><code>title: categories
+date: 2015-10-20 06:49:50
+type: &quot;categories&quot;
+comments: false
+</code></pre><p>每当创建新的md文件时候，输入</p>
+<pre><code>hexo new newfile.md
+</code></pre><p>然后在生成文件的开头添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: title <span class="comment">#文章標題</span></span><br><span class="line">date: 2016-06-01 23:47:44 <span class="comment">#文章生成時間</span></span><br><span class="line">categories: <span class="string">"Hexo教程"</span> <span class="comment">#文章分類目錄 可以省略</span></span><br><span class="line">tags: <span class="comment">#文章標籤 可以省略</span></span><br><span class="line">     - 标签1</span><br><span class="line">     - 标签2</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><h2 id="字数统计和时间统计"><a href="#字数统计和时间统计" class="headerlink" title="字数统计和时间统计"></a>字数统计和时间统计</h2><p>在根目录下安装 hexo-wordcount,运行：</p>
 <pre><code>npm install hexo-wordcount --save
 </code></pre><p>然后在主题的配置文件<code>_config.yml</code>中，配置如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Post wordcount display settings</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/willin/hexo-wordcount</span></span><br><span class="line">post_wordcount:</span><br><span class="line">item_text: <span class="literal">true</span></span><br><span class="line">wordcount: <span class="literal">true</span></span><br><span class="line">min2read: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="在每篇文章末尾统一添加“本文结束”标记"><a href="#在每篇文章末尾统一添加“本文结束”标记" class="headerlink" title="在每篇文章末尾统一添加“本文结束”标记"></a>在每篇文章末尾统一添加“本文结束”标记</h2><p>具体实现方法  <a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a> 中的章节6。</p>
@@ -743,7 +760,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置标签"><span class="nav-number">1.</span> <span class="nav-text">设置标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置分类"><span class="nav-number">2.</span> <span class="nav-text">设置分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置about"><span class="nav-number">3.</span> <span class="nav-text">设置about</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字数统计和时间统计"><span class="nav-number">4.</span> <span class="nav-text">字数统计和时间统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在每篇文章末尾统一添加“本文结束”标记"><span class="nav-number">5.</span> <span class="nav-text">在每篇文章末尾统一添加“本文结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现💗效果"><span class="nav-number">6.</span> <span class="nav-text">点击出现💗效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态粒子背景"><span class="nav-number">7.</span> <span class="nav-text">动态粒子背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitment评论"><span class="nav-number">8.</span> <span class="nav-text">Gitment评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置标签和分类"><span class="nav-number">1.</span> <span class="nav-text">设置标签和分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签"><span class="nav-number">1.1.</span> <span class="nav-text">添加标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类"><span class="nav-number">1.2.</span> <span class="nav-text">添加分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置about"><span class="nav-number">2.</span> <span class="nav-text">设置about</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字数统计和时间统计"><span class="nav-number">3.</span> <span class="nav-text">字数统计和时间统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在每篇文章末尾统一添加“本文结束”标记"><span class="nav-number">4.</span> <span class="nav-text">在每篇文章末尾统一添加“本文结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现💗效果"><span class="nav-number">5.</span> <span class="nav-text">点击出现💗效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态粒子背景"><span class="nav-number">6.</span> <span class="nav-text">动态粒子背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitment评论"><span class="nav-number">7.</span> <span class="nav-text">Gitment评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -777,7 +794,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.0k</span>
+    <span title="Site words total count">2.2k</span>
   
 </div>
 
