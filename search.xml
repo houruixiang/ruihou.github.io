@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[asch-hello-world]]></title>
-    <url>%2F2018%2F05%2F14%2Fasch-hello-world-1%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[asch开发日志 0x00 --- 搭建 hello world开发环境]]></title>
+    <url>%2F2018%2F05%2F14%2Fasch-hello-world%2F</url>
+    <content type="text"><![CDATA[今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。]]></content>
+      <categories>
+        <category>区块链, 阿希</category>
+      </categories>
+      <tags>
+        <tag>asch</tag>
+        <tag>dapp</tag>
+        <tag>blockchain</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[完善博客实用功能]]></title>
