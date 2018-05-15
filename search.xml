@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title><![CDATA[Asch开发日志 0x03 --- Asch相关算法]]></title>
-    <url>%2F2018%2F05%2F15%2Fasch-related-algo-md%2F</url>
+    <url>%2F2018%2F05%2F15%2Fasch-related-algo%2F</url>
     <content type="text"><![CDATA[学习一下Asch的算法机制。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy length of 128bit and converted it into 12 words conforming to the BIP39 standard, namely the master password. b.Perform SHA-256 hashing on the master password,and hash_seed is obtained. c.After the ed25519 Edwards curve signature algorithm is used to sign hash_seed, the key pair is generated, including the public key and private key. a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。b. 以主密码的sha256哈希做种子，得到hash_seedc. 再通过ed25519爱德华兹曲线签名算法对hash_seed进行签名，得到生成密钥对，包括公钥和私钥。 阿希地址生成算法：a.Perform SHA-256 hashing on the public key buffer,get h1. b.Perform RIPEMD-160 hashing on the h1,get payload. c.Perform SHA-256 hashing on the payload,get checksum1. d.Perform SHA-256 hashing on the checksum1,get checksum2. e.Paylaod and checnksum2 join together,get seed. f.Take the first len(payload)+4 bytes of the seed,get addr. g.Convert the addr from a byte string into a base58 string using Base58Check encoding,get b1. h."A" and b1 join together,get final Asch address.This is the most commonly used Asch Address format. a.对公钥buffer进行1次sha256运算，得到h1。b.然后对h1进行r160运算得到paylaod。c.对payload进行sha256得到checksum1。d.对checksum1进行sha256得到checksum2。e.拼接 paylaod和checnksum2，得到seed。f.取seed的len(payload)+4，得到addr。g.对addr进行base58编码得到b1。h.“A”+b1即为生成的base58格式的阿希地址。]]></content>
       <categories>
         <category>Asch DApp</category>
