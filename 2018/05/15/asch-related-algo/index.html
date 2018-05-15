@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="学习一下Asch的算法机制。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy length of">
+<meta name="description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy l">
 <meta name="keywords" content="asch,dapp,blockchain">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Asch开发日志 0x03 --- Asch相关算法">
 <meta property="og:url" content="http://ruihou.me/2018/05/15/asch-related-algo/index.html">
 <meta property="og:site_name" content="Ruihou Blog">
-<meta property="og:description" content="学习一下Asch的算法机制。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy length of">
+<meta property="og:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T14:30:02.316Z">
+<meta property="og:updated_time" content="2018-05-15T14:34:24.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x03 --- Asch相关算法">
-<meta name="twitter:description" content="学习一下Asch的算法机制。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy length of">
+<meta name="twitter:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy l">
 
 
 
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  403
+                  411
                 </span>
               
 
@@ -432,7 +432,7 @@
       
 
       
-        <p>学习一下Asch的算法机制。</p>
+        <p>学习一下Asch的算法机制，也算是深入了解了。</p>
 <h2 id="Asch的共识算法"><a href="#Asch的共识算法" class="headerlink" title="Asch的共识算法"></a>Asch的共识算法</h2><p>在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。</p>
 <h2 id="密钥对生成算法"><a href="#密钥对生成算法" class="headerlink" title="密钥对生成算法"></a>密钥对生成算法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a.The Asch system selected the entropy length of 128bit and converted it into 12 words conforming to the BIP39 standard, namely the master password. </span><br><span class="line">b.Perform SHA-256 hashing on the master password,and hash_seed is obtained. </span><br><span class="line">c.After the ed25519 Edwards curve signature algorithm is used to sign hash_seed, the key pair is generated, including the public key and private key.</span><br></pre></td></tr></table></figure>
 <p>a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。<br>b. 以主密码的sha256哈希做种子，得到hash_seed<br>c. 再通过ed25519爱德华兹曲线签名算法对hash_seed进行签名，得到生成密钥对，包括公钥和私钥。</p>
