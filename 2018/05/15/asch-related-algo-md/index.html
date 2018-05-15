@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Blockchain,Machine Learning,科研,学术,技术,生活,杂" />
+  <meta name="keywords" content="asch,dapp,blockchain," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="放荡不羁爱自由">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ruihou Blog">
-<meta property="og:url" content="http://ruihou.me/tags/博客/index.html">
+<meta name="description" content="Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。  b. 以主密码的sha25">
+<meta name="keywords" content="asch,dapp,blockchain">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Asch相关算法">
+<meta property="og:url" content="http://ruihou.me/2018/05/15/asch-related-algo-md/index.html">
 <meta property="og:site_name" content="Ruihou Blog">
-<meta property="og:description" content="放荡不羁爱自由">
+<meta property="og:description" content="Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。  b. 以主密码的sha25">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-15T14:15:41.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ruihou Blog">
-<meta name="twitter:description" content="放荡不羁爱自由">
+<meta name="twitter:title" content="Asch相关算法">
+<meta name="twitter:description" content="Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。  b. 以主密码的sha25">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://ruihou.me/tags/博客/"/>
+  <link rel="canonical" href="http://ruihou.me/2018/05/15/asch-related-algo-md/"/>
 
 
 
 
 
-  <title>标签: 博客 | Ruihou Blog</title>
+  <title>Asch相关算法 | Ruihou Blog</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,54 +283,305 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>博客<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ruihou.me/2018/05/15/asch-related-algo-md/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RuiHou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p8hu3ca6r.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180512001240.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruihou Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/12/Markdown improve/" itemprop="url">
-              
-                <span itemprop="name">完善博客实用功能</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Asch相关算法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-12T03:06:11+08:00"
-              content="2018-05-12" >
-          05-12
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T22:11:12+08:00">
+                2018-05-15
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Asch-DApp/" itemprop="url" rel="index">
+                    <span itemprop="name">Asch DApp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/15/asch-related-algo-md/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/15/asch-related-algo-md/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  440
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Asch的共识算法"><a href="#Asch的共识算法" class="headerlink" title="Asch的共识算法"></a>Asch的共识算法</h2><p>在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。</p>
+<h2 id="密钥对生成算法"><a href="#密钥对生成算法" class="headerlink" title="密钥对生成算法"></a>密钥对生成算法</h2><pre><code>a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。 
+b. 以主密码的sha256哈希做种子，得到hash_seed 
+c. 再通过ed25519爱德华兹曲线签名算法对hash_seed进行签名，得到生成密钥对，包括公钥和私钥。
+</code></pre><h2 id="阿希地址生成算法："><a href="#阿希地址生成算法：" class="headerlink" title="阿希地址生成算法："></a>阿希地址生成算法：</h2><pre><code class="bash">a.对公钥buffer进行1次sha256运算，得到h1。 
+b.然后对h1进行r160运算得到paylaod。 
+c.对payload进行sha256得到checksum1。 
+d.对checksum1进行sha256得到checksum2。 
+e.拼接 paylaod和checnksum2，得到seed。 
+f.取seed的len(payload)+4，得到addr。 
+g.对addr进行base58编码得到b1。 
+h.“A”+b1即为生成的base58格式的阿希地址。
+</code></pre>
+<p>1.Relevant algorithms of Asch blockchain—英文版<br>Distributed consensus algorithm of Asch:<br>Asch added PBFT(Practical Byzantine Fault Tolerance) on the basis of dpos(Delegated Proof of Stake) to ensure that the block chain is consistent and has high performance.</p>
+<p>Key pair generation algorithm:<br>a.The Asch system selected the entropy length of 128bit and converted it into 12 words conforming to the BIP39 standard, namely the master password.<br>b.Perform SHA-256 hashing on the master password,and hash_seed is obtained.<br>c.After the ed25519 Edwards curve signature algorithm is used to sign hash_seed, the key pair is generated, including the public key and private key.</p>
+<p>Asch address generation algorithm:<br>a.Perform SHA-256 hashing on the public key buffer,get h1.<br>b.Perform RIPEMD-160 hashing on the h1,get payload.<br>c.Perform SHA-256 hashing on the payload,get checksum1.<br>d.Perform SHA-256 hashing on the checksum1,get checksum2.<br>e.Paylaod and checnksum2 join together,get seed.<br>f.Take the first len(payload)+4 bytes of the seed,get addr.<br>g.Convert the addr from a byte string into a base58 string using Base58Check encoding,get b1.<br>h.”A” and b1 join together,get final Asch address.This is the most commonly used Asch Address format.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作，请我吃辣条吧！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://p8hu3ca6r.bkt.clouddn.com/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpg" alt="RuiHou 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    RuiHou
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://ruihou.me/2018/05/15/asch-related-algo-md/" title="Asch相关算法">http://ruihou.me/2018/05/15/asch-related-algo-md/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/asch/" rel="tag"><i class="fa fa-tag"></i> asch</a>
+          
+            <a href="/tags/dapp/" rel="tag"><i class="fa fa-tag"></i> dapp</a>
+          
+            <a href="/tags/blockchain/" rel="tag"><i class="fa fa-tag"></i> blockchain</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/15/asch-hello-world-deep-md/" rel="next" title="Asch开发日志 0x01 --- Dapp教程（青峰老大出品）">
+                <i class="fa fa-chevron-left"></i> Asch开发日志 0x01 --- Dapp教程（青峰老大出品）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -336,6 +589,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -356,8 +620,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -459,6 +732,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Asch的共识算法"><span class="nav-number">1.</span> <span class="nav-text">Asch的共识算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#密钥对生成算法"><span class="nav-number">2.</span> <span class="nav-text">密钥对生成算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阿希地址生成算法："><span class="nav-number">3.</span> <span class="nav-text">阿希地址生成算法：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -635,6 +924,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -681,6 +974,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'houruixiang',
+            repo: 'Gitment-comments',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '524a584b30f709c15915041c2b1ac463caa281a5',
+            
+                client_id: '7b1ea4ea581c631bdc07'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
