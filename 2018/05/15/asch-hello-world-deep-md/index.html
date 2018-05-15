@@ -88,7 +88,7 @@
 <meta property="og:description" content="发行自己的数字资产这个全程按照 ASCH 发行资产文档 做的，难度不大，主要是对概念的理解吧。 建议是注册Dapp时候的创世账户来发行数字资产，这个数字资产必须先设置二级密码什么的，这个对于一般的asch开发者来说会设置就好了，其他的不做要求。（好像不能先创建二级密码在发行数字资产）遇到一个小bug， 注册好了发行商信息后，在注册数字货币的时候，网页整个黑了，我傻乎乎的等了三四分钟，还是没反应。后">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p8hu3ca6r.bkt.clouddn.com/687474703a2f2f617363682d7075626c69632e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f706963732f6461707025453625413025423825453525424625383325453525424325383025453525384625393125453625423525383125453725413825.png">
-<meta property="og:updated_time" content="2018-05-15T14:02:02.781Z">
+<meta property="og:updated_time" content="2018-05-15T14:21:54.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x01 --- Dapp教程（青峰老大出品）">
 <meta name="twitter:description" content="发行自己的数字资产这个全程按照 ASCH 发行资产文档 做的，难度不大，主要是对概念的理解吧。 建议是注册Dapp时候的创世账户来发行数字资产，这个数字资产必须先设置二级密码什么的，这个对于一般的asch开发者来说会设置就好了，其他的不做要求。（好像不能先创建二级密码在发行数字资产）遇到一个小bug， 注册好了发行商信息后，在注册数字货币的时候，网页整个黑了，我傻乎乎的等了三四分钟，还是没反应。后">
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,404
+                  1,267
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  6
                 </span>
               
             </div>
@@ -456,13 +456,9 @@
 <h3 id="获取文章评论列表"><a href="#获取文章评论列表" class="headerlink" title="获取文章评论列表"></a>获取文章评论列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET <span class="string">'http://10.10.30.10:4096/api/dapps/97b12583fed2973da179a6484ef15155f49503bc7ce2d45a6574f8e8ab09ff86/articles/1/comments'</span> &amp;&amp; <span class="built_in">echo</span></span><br><span class="line">// 返回结果</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"comments"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"id"</span>: 1,    //comment id,即cid，给评论打赏时会用</span><br><span class="line">            <span class="string">"tid"</span>: <span class="string">"674964e3bbb75d31785ff75d56df85f27b5f02a453c462df37e96fc272292898"</span>,</span><br><span class="line">            <span class="string">"authorId"</span>: <span class="string">"AFUH568CbGC2GPcE4gXHiZhxdYQYfziz2J"</span>,</span><br><span class="line">            <span class="string">"aid"</span>: 1,   //文章id</span><br><span class="line">            <span class="string">"pid"</span>: 0,</span><br><span class="line">            <span class="string">"content"</span>: <span class="string">"content1"</span>,</span><br><span class="line">            <span class="string">"rewards"</span>: 0,</span><br><span class="line">            <span class="string">"t_timestamp"</span>: 33597194,</span><br><span class="line">            <span class="string">"t_type"</span>: 1001, //合约id</span><br><span class="line">            <span class="string">"t_height"</span>: 472</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"count"</span>: 1,</span><br><span class="line">    <span class="string">"success"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="给文章投票"><a href="#给文章投票" class="headerlink" title="给文章投票"></a>给文章投票</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./node_modules/asch-cli/bin/asch-cli dapptransaction -e <span class="string">"minor borrow display rebel depart core buzz right distance avocado immense push"</span> -d 97b12583fed2973da179a6484ef15155f49503bc7ce2d45a6574f8e8ab09ff86 -t 1002 -f 10000000 -a <span class="string">'["1","100000"]'</span></span><br><span class="line"> // 返回，</span><br><span class="line"> 3f2a934829dd0301d4cf9e57772f76fa1e3c0b79eab07d59e5344078318ac71c</span><br></pre></td></tr></table></figure>
 <h3 id="给评论打赏"><a href="#给评论打赏" class="headerlink" title="给评论打赏"></a>给评论打赏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./node_modules/asch-cli/bin/asch-cli dapptransaction -e <span class="string">"minor borrow display rebel depart core buzz right distance avocado immense push"</span> -d 97b12583fed2973da179a6484ef15155f49503bc7ce2d45a6574f8e8ab09ff86 -t 1003 -f 10000000 -a <span class="string">'["1","100000000"]'</span></span><br><span class="line">// 返回,打赏1.0 xas</span><br><span class="line">a8ecd9b0f80204d4aa1a63e1c18a4b6f582c5f8adc4b6c862246e913be008e2d</span><br></pre></td></tr></table></figure>
-<h2 id="青峰老大在CSDN上的开发教程"><a href="#青峰老大在CSDN上的开发教程" class="headerlink" title="青峰老大在CSDN上的开发教程"></a>青峰老大在CSDN上的开发教程</h2><p>asch团队也是不容易啊，自己开发了平台不算，还得推广啊。生态现在没有建立起来，开发者能力不够，社区不够活跃，老大只能自己撸起袖子加油干，自己又开发了一个 <a href="https://blog.csdn.net/asch2016/article/details/54583016" target="_blank" rel="noopener">Dapp开发教程四 Asch Dapp Dice Game</a> 的Dapp，代码都是开源的，好好理解吧。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a href="https://blog.csdn.net/asch2016/article/details/53841450#comments" target="_blank" rel="noopener">Dapp开发教程一 Asch Dapp Hello World</a></li>
 <li><a href="https://blog.csdn.net/asch2016/article/details/54288524" target="_blank" rel="noopener">Dapp开发教程二一 Asch Dapp Asset</a></li>
-<li><a href="https://blog.csdn.net/asch2016/article/details/54377429" target="_blank" rel="noopener">Dapp开发教程三 Asch Dapp Mini DAO</a></li>
-<li><a href="https://blog.csdn.net/asch2016/article/details/54583016" target="_blank" rel="noopener">Dapp开发教程四 Asch Dapp Dice Game</a></li>
-<li><a href="https://blog.csdn.net/asch2016/article/details/54646009" target="_blank" rel="noopener">Dapp开发教程 发布Dapp到线上</a></li>
 <li><a href="http://docs.asch.mobi/docs/asch_issue_assets.html#1-%E6%B3%A8%E5%86%8CAsch%E9%92%B1%E5%8C%85%E5%B9%B6%E8%AE%BE%E7%BD%AE%E8%80%8C%E4%BA%8C%E7%BA%A7%E5%AF%86%E7%A0%81%EF%BC%8C%E8%AE%BE%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%AF%86%E7%A0%81%E9%9C%80%E6%94%AF%E4%BB%985-xas%EF%BC%88%E5%A6%82%E5%B7%B2%E6%9C%89%E9%92%B1%E5%8C%85%E4%B8%94%E8%AE%BE%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%AF%86%E7%A0%81%E8%AF%B7%E5%BF%BD%E7%95%A5%E6%AD%A4%E6%AD%A5%E9%AA%A4%EF%BC%89" target="_blank" rel="noopener">ASCH 发行资产文档</a></li>
 <li><a href="https://www.zybuluo.com/zhenxi/note/1030296" target="_blank" rel="noopener">Asch DAPP核心开发流程解析</a></li>
 <li><a href="http://wiki.jikexueyuan.com/project/chrome-devtools/" target="_blank" rel="noopener">Chrome 开发工具指南</a></li>
@@ -582,8 +578,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/15/asch-related-algo-md/" rel="prev" title="Asch相关算法">
-                Asch相关算法 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/15/asch-related-algo-md/" rel="prev" title="Asch开发日志 0x03 --- Asch相关算法">
+                Asch开发日志 0x03 --- Asch相关算法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -672,7 +668,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -765,7 +761,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#发行自己的数字资产"><span class="nav-number">1.</span> <span class="nav-text">发行自己的数字资产</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于如何开发一个Dapp"><span class="nav-number">2.</span> <span class="nav-text">关于如何开发一个Dapp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dapp相关接口API"><span class="nav-number">3.</span> <span class="nav-text">Dapp相关接口API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册dapp"><span class="nav-number">3.1.</span> <span class="nav-text">注册dapp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#充值100xas到dapp"><span class="nav-number">3.2.</span> <span class="nav-text">充值100xas到dapp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dapp内部转账"><span class="nav-number">3.3.</span> <span class="nav-text">dapp内部转账</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询dapp账户余额"><span class="nav-number">3.4.</span> <span class="nav-text">查询dapp账户余额</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询dapp高度"><span class="nav-number">3.5.</span> <span class="nav-text">查询dapp高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布文章"><span class="nav-number">3.6.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章列表"><span class="nav-number">3.7.</span> <span class="nav-text">文章列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章详情"><span class="nav-number">3.8.</span> <span class="nav-text">文章详情</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评论"><span class="nav-number">3.9.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取文章评论列表"><span class="nav-number">3.10.</span> <span class="nav-text">获取文章评论列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章投票"><span class="nav-number">3.11.</span> <span class="nav-text">给文章投票</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给评论打赏"><span class="nav-number">3.12.</span> <span class="nav-text">给评论打赏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#青峰老大在CSDN上的开发教程"><span class="nav-number">4.</span> <span class="nav-text">青峰老大在CSDN上的开发教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#发行自己的数字资产"><span class="nav-number">1.</span> <span class="nav-text">发行自己的数字资产</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于如何开发一个Dapp"><span class="nav-number">2.</span> <span class="nav-text">关于如何开发一个Dapp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dapp相关接口API"><span class="nav-number">3.</span> <span class="nav-text">Dapp相关接口API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册dapp"><span class="nav-number">3.1.</span> <span class="nav-text">注册dapp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#充值100xas到dapp"><span class="nav-number">3.2.</span> <span class="nav-text">充值100xas到dapp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dapp内部转账"><span class="nav-number">3.3.</span> <span class="nav-text">dapp内部转账</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询dapp账户余额"><span class="nav-number">3.4.</span> <span class="nav-text">查询dapp账户余额</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询dapp高度"><span class="nav-number">3.5.</span> <span class="nav-text">查询dapp高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布文章"><span class="nav-number">3.6.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章列表"><span class="nav-number">3.7.</span> <span class="nav-text">文章列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章详情"><span class="nav-number">3.8.</span> <span class="nav-text">文章详情</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评论"><span class="nav-number">3.9.</span> <span class="nav-text">评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取文章评论列表"><span class="nav-number">3.10.</span> <span class="nav-text">获取文章评论列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章投票"><span class="nav-number">3.11.</span> <span class="nav-text">给文章投票</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给评论打赏"><span class="nav-number">3.12.</span> <span class="nav-text">给评论打赏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
