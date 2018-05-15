@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T05:30:15.323Z">
+<meta property="og:updated_time" content="2018-05-15T05:31:33.948Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x00 --- 搭建 hello world开发环境">
 <meta name="twitter:description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
@@ -472,6 +472,7 @@ Enter asset name, for example               &gt; CHROMO
 <p><strong>该账户将作为下面的cctime.XCT资产发行者、cctime DAPP的注册者以及给其它账户转账的发送者，创世账户给该地址转1000个xas。<br>A账户去注册发行商cctime，然后注册一个资产XCT（上限100亿，精度8，描述为：cctime.org的token时讯币，其它用默认的），最后发行10亿的cctime.XCT。</strong></p>
 <p>当初就是对这段理解不够啊，说的非常详细了。在测试环境下testnet，账户A想要发行一个Dapp和数字资产，当然也理所应当的把Dapp注册到账户A下面，但是这个时候账户A没有阿希币XAS，那么asch的开发这在自己的创世区块 <code>someone manual strong movie roof episode eight spatial brown soldier soup motor</code> 下给了一个亿的xas，这个只要你在本地安装好asch的生产环境都可以访问到。<br>因此，第一步才需要从创世区块下向账户A转出一定的xas,这样账户A就有了足够的xas发行代币了。我的天啊，我居然花费了两天才明白了asch团队的苦心，也是醉了。</p>
 <p>其余的使用 <code>asch-cli crypto -g</code> 生成的账户都可以看成一般用户，可以用来转账的，注册Dapp时候填写的委托人也只是DPOS共识机制所要求的（3-101个委托人）。</p>
+<hr>
 <p>至于发行资产，我现在的理解是，在注册Dapp时候发行的那个是Dapp内部的资产，之内在Dapp内部使用，但是我设置的好像是20481024512，超过了一亿，没有正确加载出来，我还是要在搞一下。</p>
 <h2 id="进一步开发调试"><a href="#进一步开发调试" class="headerlink" title="进一步开发调试"></a>进一步开发调试</h2><p>使用浏览器打开<br><a href="http://localhost:4096/dapps/1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db/，" target="_blank" rel="noopener">http://localhost:4096/dapps/1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db/，</a><br>可以访问默认的一个前端页面，该页面可以进行一些简单的接口测试</p>
 <hr>
@@ -482,8 +483,9 @@ Enter asset name, for example               &gt; CHROMO
 </li>
 <li><p><a href="https://bbs.asch.io/topic/4757/%E6%96%B0%E6%89%8B%E6%90%AD%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%8F%91%E5%B8%83dapp%E6%95%99%E7%A8%8B" target="_blank" rel="noopener">新手搭环境与发布dapp教程</a></p>
 </li>
+<li><p><a href="https://www.zybuluo.com/zhenxi/note/1030296" target="_blank" rel="noopener">Asch DAPP核心开发流程解析</a></p>
+</li>
 </ol>
-<p>4.<a href="https://www.zybuluo.com/zhenxi/note/1030296" target="_blank" rel="noopener">Asch DAPP核心开发流程解析</a></p>
 
       
     </div>
