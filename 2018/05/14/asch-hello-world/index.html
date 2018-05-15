@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T05:31:33.948Z">
+<meta property="og:updated_time" content="2018-05-15T08:38:10.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x00 --- 搭建 hello world开发环境">
 <meta name="twitter:description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,136
+                  2,257
                 </span>
               
 
@@ -474,6 +474,7 @@ Enter asset name, for example               &gt; CHROMO
 <p>其余的使用 <code>asch-cli crypto -g</code> 生成的账户都可以看成一般用户，可以用来转账的，注册Dapp时候填写的委托人也只是DPOS共识机制所要求的（3-101个委托人）。</p>
 <hr>
 <p>至于发行资产，我现在的理解是，在注册Dapp时候发行的那个是Dapp内部的资产，之内在Dapp内部使用，但是我设置的好像是20481024512，超过了一亿，没有正确加载出来，我还是要在搞一下。</p>
+<h2 id="资产再探究"><a href="#资产再探究" class="headerlink" title="资产再探究"></a>资产再探究</h2><p>Dapp的创世块中可以创建内置资产，但不是必须的，内置资产无法跨链转账，只能在链内使用。在主链发行的UIA（用户自定义资产）可以充值到任意dapp中，也可从dapp提现到主链，这是dapp内置资产和UIA最大的区别。“一链多币，一币多链”指的就是主链可以发行多个UIA，而每个UIA都可以充值到多个dapp中。</p>
 <h2 id="进一步开发调试"><a href="#进一步开发调试" class="headerlink" title="进一步开发调试"></a>进一步开发调试</h2><p>使用浏览器打开<br><a href="http://localhost:4096/dapps/1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db/，" target="_blank" rel="noopener">http://localhost:4096/dapps/1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db/，</a><br>可以访问默认的一个前端页面，该页面可以进行一些简单的接口测试</p>
 <hr>
 <ol>
@@ -784,7 +785,7 @@ Enter asset name, for example               &gt; CHROMO
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单流程"><span class="nav-number">1.</span> <span class="nav-text">简单流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个账户的意义"><span class="nav-number">2.</span> <span class="nav-text">几个账户的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进一步开发调试"><span class="nav-number">3.</span> <span class="nav-text">进一步开发调试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单流程"><span class="nav-number">1.</span> <span class="nav-text">简单流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个账户的意义"><span class="nav-number">2.</span> <span class="nav-text">几个账户的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资产再探究"><span class="nav-number">3.</span> <span class="nav-text">资产再探究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进一步开发调试"><span class="nav-number">4.</span> <span class="nav-text">进一步开发调试</span></a></li></ol></div>
             
 
           </div>
@@ -818,7 +819,7 @@ Enter asset name, for example               &gt; CHROMO
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.0k</span>
+    <span title="Site words total count">5.2k</span>
   
 </div>
 
