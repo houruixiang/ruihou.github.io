@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy l">
+<meta name="description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 Asch 系统采用的共识机制是基于 DPOS 的，也是使用了委托人选举的制度，但是在算法的后半部分采">
 <meta name="keywords" content="asch,dapp,blockchain">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Asch开发日志 0x03 --- Asch相关算法">
 <meta property="og:url" content="http://ruihou.me/2018/05/15/asch-related-algo/index.html">
 <meta property="og:site_name" content="Ruihou Blog">
-<meta property="og:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy l">
+<meta property="og:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 Asch 系统采用的共识机制是基于 DPOS 的，也是使用了委托人选举的制度，但是在算法的后半部分采">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T14:34:24.201Z">
+<meta property="og:updated_time" content="2018-05-16T08:57:28.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x03 --- Asch相关算法">
-<meta name="twitter:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 密钥对生成算法123a.The Asch system selected the entropy l">
+<meta name="twitter:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 Asch 系统采用的共识机制是基于 DPOS 的，也是使用了委托人选举的制度，但是在算法的后半部分采">
 
 
 
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  411
+                  1,854
                 </span>
               
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  7
                 </span>
               
             </div>
@@ -434,6 +434,19 @@
       
         <p>学习一下Asch的算法机制，也算是深入了解了。</p>
 <h2 id="Asch的共识算法"><a href="#Asch的共识算法" class="headerlink" title="Asch的共识算法"></a>Asch的共识算法</h2><p>在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。</p>
+<p>Asch 系统采用的共识机制是基于 DPOS 的，也是使用了委托人选举的制度，但是在算法的后半部分采用了一个优化后的 PBFT 算法变种，这个算法可以在 t &lt; n / 3 时，以O(n^2)消息复杂度，O(1)的时间复杂度使忠诚的节点达成一致，不会分叉，其中 t 表示拜占庭节点(即可能发生任意行为的节点，比如网络延迟、停机、恶意攻击等等)的个数，n 表示所有节点的个数。</p>
+<h3 id="委托人选举"><a href="#委托人选举" class="headerlink" title="委托人选举"></a>委托人选举</h3><p>Asch 系统的委托人选举制度与 DPOS 是类似的，核心系统是由 101 个委托人节点组成，委托人是被社区选举的可信账户，得票最高的 101 个委托人负责生产区块。得票排名未进入前 101 名的账户被称为候选人，当他们将来获得足够多的选票并进入前 101 名后，将成为正式的委托人。</p>
+<p>每个 Asch 用户都有权利投票给最多 101 位委托人，选票的权重是由用户持有的 XAS数量决定。</p>
+<p>每一个选举周期产生 101 个区块，每一次投票和委托人排名的变化将体现在下一个周</p>
+<p>期。每个区块产生的间隔时间是 10 秒，新创建的区块会被广播到网络中并添加到区块链中。每当新的区块被添加到区块链中，该区块之前的所有交易的确认次数加一，得到 6 个确认后，可以认为交易是安全的，如果数额较小的交易，可以允许更小的确认次数，相反，数额较大的交易可以通过增加确认数来保证安全性。</p>
+<p>如果有少数委托人发生故障，比如被攻击或者宕机，就会错失区块，这会被记录在案，这将影响该节点的在线率，进而影响社区的投票。因此委托人的竞选是需要严肃对待的，委托人应当由有一定网站运营经验的人来做，委托人要保障自己节点的稳定性，并以此促进整个系统的安全和稳定。</p>
+<h3 id="拜占庭容错"><a href="#拜占庭容错" class="headerlink" title="拜占庭容错"></a>拜占庭容错</h3><p>Asch 系统与 DPOS 的不同主要体现在算法的后半部分。</p>
+<p>DPOS 采用的方法是，首先对当前 round 的委托人列表进行随机的排序(保证每一轮的委托人顺序不同，也无法预测下一轮委托人顺序)，然后通过 round-robin 的方式依次让每个委托人创建区块。这个算法的主要缺点是，如果某个委托人节点叛变了，他可能会广播多个不一致的区块，这些区块间可能包括双重支付交易，导致整个网络被分叉了。当然，如果只有一个委托人叛变的话，这个分叉很快就可以通过下一次最长链同步的方法来消除，但是随着叛变节点的增加，消除分叉的时间将越来越长，少量节点的联合叛变将严重影响系统的安全性，即使一个交易达到 6 次确认，也很可能是不安全的。</p>
+<p>为了解决这个问题，我们引入了 PBFT(Pratical Byzantine Fault Tolerance)算法。PBFT 算法也是使用 round-robin 的方式选择委托人，但是选出委托人后并不立即创建区块，而是首先发起一个提议(propose)，这个提议的目的是确定下一次区块的 hash。当超过 2/3 的节点都赞成该提议时，才接受由提议人创建的的下一个区块，下一个区块的</p>
+<p>hash 必须与当前 round 达成共识的区块 hash 一致。从本质上来说，PBFT 算法的加入解决了委托人权利滥用的问题，使得委托人的记账能力更为可控。</p>
+<h2 id="Asch-受托人与锻造"><a href="#Asch-受托人与锻造" class="headerlink" title="Asch 受托人与锻造"></a>Asch 受托人与锻造</h2><p>Asch系统中每个账户都可以注册成为受托人(需要支付100XAS)。成为受托人以后可以接受任意持币人的投票，当得票率排名进入前101时，可以获得记账权(即生产区块的权利，相当于比特币中的矿工)，并获取一定的奖励。 生产区块的过程叫做锻造(forging)。锻造不像比特币挖矿那样需要很强的算力，普通电脑即可进行，验证记账权的算法综合了时间片验证、受托人随机排名、受托人签名以及pbft算法等，具体可以参考asch的共识协议 排名前101的受托人按照时间顺序轮流产生区块，区块间隔为10秒。当轮班受托人出现异常无法生产区块时，则延期到下一个10秒，由下一个受托人继续生产。</p>
+<p>每101个区块为一个周期，每个周期的受托人锻造顺序随机变换，每个周期的最后一个区块产出的时候，会进行该周期的收益结算，同时刷新新的排名。</p>
+<p>因为宕机、网络错误等原因无法生产区块的受托人无法获得该周期的收益，并且会降低生产率。生产率是衡量一个受托人稳定性的指标，生产率过低会影响得票率。<br>正常生产区块的受托人则平分收益，收益包括区块奖励和交易费，排名和得票率的高低并不影响收益的多少，进入前101名的受托人收益率是相同的。</p>
 <h2 id="密钥对生成算法"><a href="#密钥对生成算法" class="headerlink" title="密钥对生成算法"></a>密钥对生成算法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a.The Asch system selected the entropy length of 128bit and converted it into 12 words conforming to the BIP39 standard, namely the master password. </span><br><span class="line">b.Perform SHA-256 hashing on the master password,and hash_seed is obtained. </span><br><span class="line">c.After the ed25519 Edwards curve signature algorithm is used to sign hash_seed, the key pair is generated, including the public key and private key.</span><br></pre></td></tr></table></figure>
 <p>a. Asch 系统选择的熵长度为 128bit，将之转换成符合BIP39标准的12 个单词，即主密码。<br>b. 以主密码的sha256哈希做种子，得到hash_seed<br>c. 再通过ed25519爱德华兹曲线签名算法对hash_seed进行签名，得到生成密钥对，包括公钥和私钥。</p>
 <h2 id="阿希地址生成算法："><a href="#阿希地址生成算法：" class="headerlink" title="阿希地址生成算法："></a>阿希地址生成算法：</h2><pre><code class="bash">a.Perform SHA-256 hashing on the public key buffer,get h1. 
@@ -741,7 +754,7 @@ h.<span class="string">"A"</span> and b1 join together,get final Asch address.Th
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Asch的共识算法"><span class="nav-number">1.</span> <span class="nav-text">Asch的共识算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#密钥对生成算法"><span class="nav-number">2.</span> <span class="nav-text">密钥对生成算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阿希地址生成算法："><span class="nav-number">3.</span> <span class="nav-text">阿希地址生成算法：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Asch的共识算法"><span class="nav-number">1.</span> <span class="nav-text">Asch的共识算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#委托人选举"><span class="nav-number">1.1.</span> <span class="nav-text">委托人选举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拜占庭容错"><span class="nav-number">1.2.</span> <span class="nav-text">拜占庭容错</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Asch-受托人与锻造"><span class="nav-number">2.</span> <span class="nav-text">Asch 受托人与锻造</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#密钥对生成算法"><span class="nav-number">3.</span> <span class="nav-text">密钥对生成算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阿希地址生成算法："><span class="nav-number">4.</span> <span class="nav-text">阿希地址生成算法：</span></a></li></ol></div>
             
 
           </div>
@@ -775,7 +788,7 @@ h.<span class="string">"A"</span> and b1 join together,get final Asch address.Th
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">7.9k</span>
   
 </div>
 
