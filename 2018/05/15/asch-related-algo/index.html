@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 Asch 系统采用的共识机制是基于 DPOS 的，也是使用了委托人选举的制度，但是在算法的后半部分采">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T08:57:28.997Z">
+<meta property="og:updated_time" content="2018-05-16T09:00:32.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x03 --- Asch相关算法">
 <meta name="twitter:description" content="学习一下Asch的算法机制，也算是深入了解了。 Asch的共识算法在委托权益证明(DPOS, Delegated Proof of Stake)的基础上加入了拜占庭容错算法(PBFT, Practical Byzantine Fault Tolerance),从而保证区块链不分叉并且有较高的性能。 Asch 系统采用的共识机制是基于 DPOS 的，也是使用了委托人选举的制度，但是在算法的后半部分采">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,854
+                  1,859
                 </span>
               
 
@@ -460,6 +460,9 @@ h.<span class="string">"A"</span> and b1 join together,get final Asch address.Th
 
 </code></pre>
 <p>a.对公钥buffer进行1次sha256运算，得到h1。<br>b.然后对h1进行r160运算得到paylaod。<br>c.对payload进行sha256得到checksum1。<br>d.对checksum1进行sha256得到checksum2。<br>e.拼接 paylaod和checnksum2，得到seed。<br>f.取seed的len(payload)+4，得到addr。<br>g.对addr进行base58编码得到b1。<br>h.“A”+b1即为生成的base58格式的阿希地址。</p>
+<ol>
+<li><a href="https://github.com/AschPlatform/asch/blob/master/docs/asch_whitepaper.md" target="_blank" rel="noopener">Asch 白皮书</a></li>
+</ol>
 
       
     </div>
