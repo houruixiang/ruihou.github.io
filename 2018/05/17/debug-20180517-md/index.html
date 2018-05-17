@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T07:19:18.755Z">
+<meta property="og:updated_time" content="2018-05-17T07:27:09.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x04 --- ASCH HTTP API文档">
 <meta name="twitter:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,706
+                  1,657
                 </span>
               
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  8
                 </span>
               
             </div>
@@ -492,7 +492,7 @@
 <td style="text-align:left">wait</td>
 <td style="text-align:center">number</td>
 <td style="text-align:center">N</td>
-<td style="text-align:center">等待确认数，范围为0-6，默认为0。wait为0表示不等待，速度最快，但无法保证数据在掉电情况下不丢失，大于2时，可以100%确保数据已经同步到大部分机器上了，但需要时间较长10-20秒之间，折中的方案是1,wait为1时虽然不能100%保证同步到其他机器，但失败的几率非常小，只是理论上存在，实际上还没遇到过</td>
+<td style="text-align:center">等待确认数，范围为0-6，默认为0。wait为0表示不等待，速度最快，但无法保证数据在掉电情况下不丢失，大于2时，可以100%确保数据已经同步到大部分机器上了，但需要时间较长10-20秒之间，折中的方案是1</td>
 </tr>
 </tbody>
 </table>
@@ -524,7 +524,7 @@
 <pre><code>console.log(new Buffer(&apos;helloworld&apos;).toString(&apos;base64&apos;));
 </code></pre><p>返回结果</p>
 <pre><code>aGVsbG93b3JsZA==
-</code></pre><p> Asch用base64方式存储刚才得到的编码值”aGVsbG93b3JsZA==”,不过要首先推出<code>node</code>.</p>
+</code></pre><p> Asch用<code>base64</code>方式存储刚才得到的编码值”aGVsbG93b3JsZA==”,不过要首先退出<code>node</code>.</p>
 <pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X PUT -d &apos;{&quot;secret&quot;:&quot;side olympic horse bag gate delay quick dash spice palm place employ&quot;,&quot;secondSecret&quot;:&quot; &quot;,&quot;content&quot;:&quot;aGVsbG93b3JsZA==&quot;,&quot;encode&quot;:&quot;base64&quot;,&quot;wait&quot;:1}&apos; http://localhost:4096/api/storages &amp;&amp; echo
 </code></pre><p>JSON返回示例：</p>
 <pre><code>{&quot;success&quot;:true,&quot;transactionId&quot;:&quot;7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2&quot;}
@@ -537,7 +537,37 @@
 <pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X GET http://localhost:4096/api/storages/7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2 &amp;&amp; echo   
 </code></pre><p>JSON返回示例：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"success"</span>:<span class="literal">true</span>,<span class="string">"id"</span>:<span class="string">"7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2"</span>,<span class="string">"height"</span>:<span class="string">"16889"</span>,<span class="string">"blockId"</span>:<span class="string">"4b44dd9fffd5c76b5f0f04089202e916bc708f80e526c259f2cccd425b6af838"</span>,<span class="string">"type"</span>:8,<span class="string">"timestamp"</span>:59467003,<span class="string">"senderPublicKey"</span>:<span class="string">"ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825"</span>,<span class="string">"senderId"</span>:<span class="string">"AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS"</span>,<span class="string">"recipientId"</span>:<span class="string">""</span>,<span class="string">"amount"</span>:0,<span class="string">"fee"</span>:10000000,<span class="string">"signature"</span>:<span class="string">"9e3fe223a7f5235a079694539414d22bb1939131f70e4fcbedc68264b96c7f13d13632bca0135ddcc3a3d774be5611319e7251341b8eb89caba27f18aae26f01"</span>,<span class="string">"signSignature"</span>:<span class="string">""</span>,<span class="string">"signatures"</span>:null,<span class="string">"confirmations"</span>:<span class="string">"40"</span>,<span class="string">"args"</span>:null,<span class="string">"asset"</span>:&#123;<span class="string">"storage"</span>:&#123;<span class="string">"content"</span>:<span class="string">"68656c6c6f776f726c64"</span>&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="上传数据-签名后再上传"><a href="#上传数据-签名后再上传" class="headerlink" title="上传数据(签名后再上传)"></a>上传数据(签名后再上传)</h3><p>POST接口规格如下： <code>payload</code>为<code>asch-js</code>创建出来的交易数据 接口地址：<code>/peer/transactions</code><br>请求方式：<code>post</code><br>支持格式：<code>json</code><br>请求参数说明：<br>|名称|类型|必填|说明|<br>|:—|:—:|:—:|:—|<br>|secret|string|Y|asch账户密码|<br>|secondSecret|string|N|发送者二级密码，最小长度1，最大长度100|<br>|content|string|Y|上传数据内容，必须是hex格式|</p>
+<h3 id="上传数据-签名后再上传"><a href="#上传数据-签名后再上传" class="headerlink" title="上传数据(签名后再上传)"></a>上传数据(签名后再上传)</h3><p>POST接口规格如下： <code>payload</code>为<code>asch-js</code>创建出来的交易数据 接口地址：<code>/peer/transactions</code><br>请求方式：<code>post</code><br>支持格式：<code>json</code><br>请求参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">必填</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">secret</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:left">asch账户密码</td>
+</tr>
+<tr>
+<td style="text-align:left">secondSecret</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">N</td>
+<td style="text-align:left">发送者二级密码，最小长度1，最大长度100</td>
+</tr>
+<tr>
+<td style="text-align:left">content</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:left">上传数据内容，必须是hex格式</td>
+</tr>
+</tbody>
+</table>
 <p>返回参数说明：</p>
 <table>
 <thead>
@@ -912,7 +942,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.8k</span>
+    <span title="Site words total count">9.7k</span>
   
 </div>
 
