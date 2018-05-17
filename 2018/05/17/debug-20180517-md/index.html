@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T13:01:18.099Z">
+<meta property="og:updated_time" content="2018-05-17T13:38:44.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x04 --- ASCH HTTP API文档">
 <meta name="twitter:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,310
+                  2,349
                 </span>
               
 
@@ -539,11 +539,51 @@
     &quot;success&quot;:true,
     &quot;transactionId&quot;:&quot;7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2&quot;
 }
-</code></pre><h4 id="根据交易id查询存储的数据-1"><a href="#根据交易id查询存储的数据-1" class="headerlink" title="根据交易id查询存储的数据-1"></a>根据交易id查询存储的数据-1</h4><p>接口地址：<code>/api/storages/get</code><br>请求方式：<code>GET</code><br>支持格式：<code>urlencode</code><br>请求参数说明：</p>
+</code></pre><h4 id="根据交易id查询存储的数据-1"><a href="#根据交易id查询存储的数据-1" class="headerlink" title="根据交易id查询存储的数据-1"></a>根据交易id查询存储的数据-1</h4><p>接口地址：<code>/api/storages/get/?id=</code><br>请求方式：<code>GET</code><br>支持格式：<code>urlencode</code><br>请求参数说明：交易<code>id</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">必填</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">交易id</td>
+</tr>
+</tbody>
+</table>
+<p>返回参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">success</td>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">是否成功获得response数据。</td>
+</tr>
+<tr>
+<td style="text-align:center">id</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">交易id</td>
+</tr>
+</tbody>
+</table>
 <p>请求示例：</p>
 <pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X GET http://localhost:4096/api/storages/get/?id=7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2 &amp;&amp; echo   
 </code></pre><p>JSON返回示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"success"</span>:<span class="literal">true</span>,</span><br><span class="line">    <span class="string">"id"</span>:<span class="string">"7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2"</span>,</span><br><span class="line">    <span class="string">"height"</span>:<span class="string">"16889"</span>,</span><br><span class="line">    <span class="string">"blockId"</span>:<span class="string">"4b44dd9fffd5c76b5f0f04089202e916bc708f80e526c259f2cccd425b6af838"</span>,</span><br><span class="line">    <span class="string">"type"</span>:8,</span><br><span class="line">    <span class="string">"timestamp"</span>:59467003,</span><br><span class="line">    <span class="string">"senderPublicKey"</span>:<span class="string">"ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825"</span>,</span><br><span class="line">    <span class="string">"senderId"</span>:<span class="string">"AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS"</span>,</span><br><span class="line">    <span class="string">"recipientId"</span>:<span class="string">""</span>,</span><br><span class="line">    <span class="string">"amount"</span>:0,</span><br><span class="line">    <span class="string">"fee"</span>:10000000,</span><br><span class="line">    <span class="string">"signature"</span>:<span class="string">"9e3fe223a7f5235a079694539414d22bb1939131f70e4fcbedc68264b96c7f13d13632bca0135ddcc3a3d774be5611319e7251341b8eb89caba27f18aae26f01"</span>,</span><br><span class="line">    <span class="string">"signSignature"</span>:<span class="string">""</span>,</span><br><span class="line">    <span class="string">"signatures"</span>:null,</span><br><span class="line">    <span class="string">"confirmations"</span>:<span class="string">"18"</span>,</span><br><span class="line">    <span class="string">"args"</span>:null,</span><br><span class="line">    <span class="string">"asset"</span>:&#123;<span class="string">"storage"</span>:&#123;<span class="string">"content"</span>:<span class="string">"68656c6c6f776f726c64"</span>&#125;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="根据交易id查询存储的数据-2"><a href="#根据交易id查询存储的数据-2" class="headerlink" title="根据交易id查询存储的数据-2"></a>根据交易id查询存储的数据-2</h4><p>接口地址：<code>/api/storages/:id</code><br>请求方式：<code>GET</code><br>支持格式：<code>urlencode</code><br>请求参数说明：交易<code>id</code><br>备注：与<code>/api/storages/get</code>功能相同</p>
+<h4 id="根据交易id查询存储的数据-2"><a href="#根据交易id查询存储的数据-2" class="headerlink" title="根据交易id查询存储的数据-2"></a>根据交易id查询存储的数据-2</h4><p>接口地址：<code>/api/storages/id</code><br>请求方式：<code>GET</code><br>支持格式：<code>urlencode</code><br>请求参数说明：交易<code>id</code><br>备注：与<code>/api/storages/get</code>功能相同</p>
 <p>请求示例：</p>
 <pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X GET http://localhost:4096/api/storages/7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2 &amp;&amp; echo   
 </code></pre><p>JSON返回示例：</p>
