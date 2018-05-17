@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
+<meta name="description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 <meta name="keywords" content="asch,dapp,blockchain">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Asch开发日志 0x00 --- 搭建 hello world开发环境">
-<meta property="og:url" content="http://ruihou.me/2018/05/14/asch-hello-world/index.html">
+<meta property="og:title" content="Asch开发日志 0x04 --- ASCH HTTP API文档">
+<meta property="og:url" content="http://ruihou.me/2018/05/17/debug-20180517-md/index.html">
 <meta property="og:site_name" content="Ruihou Blog">
-<meta property="og:description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
+<meta property="og:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-15T08:38:10.823Z">
+<meta property="og:updated_time" content="2018-05-17T06:13:08.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Asch开发日志 0x00 --- 搭建 hello world开发环境">
-<meta name="twitter:description" content="今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。  简单流程按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( Asch),问题主要是出现在我自己搭建一个hello world的Dapp时候， &amp;gt; mkdir asch-t">
+<meta name="twitter:title" content="Asch开发日志 0x04 --- ASCH HTTP API文档">
+<meta name="twitter:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://ruihou.me/2018/05/14/asch-hello-world/"/>
+  <link rel="canonical" href="http://ruihou.me/2018/05/17/debug-20180517-md/"/>
 
 
 
 
 
-  <title>Asch开发日志 0x00 --- 搭建 hello world开发环境 | Ruihou Blog</title>
+  <title>Asch开发日志 0x04 --- ASCH HTTP API文档 | Ruihou Blog</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ruihou.me/2018/05/14/asch-hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://ruihou.me/2018/05/17/debug-20180517-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RuiHou">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Asch开发日志 0x00 --- 搭建 hello world开发环境</h1>
+          <h1 class="post-title" itemprop="name headline">Asch开发日志 0x04 --- ASCH HTTP API文档</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T18:17:26+08:00">
-                2018-05-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T13:33:54+08:00">
+                2018-05-17
               </time>
             
 
@@ -367,8 +367,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/14/asch-hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/14/asch-hello-world/" itemprop="commentsCount"></span>
+                <a href="/2018/05/17/debug-20180517-md/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/17/debug-20180517-md/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,257
+                  1,354
                 </span>
               
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10
+                  7
                 </span>
               
             </div>
@@ -432,60 +432,145 @@
       
 
       
-        <p>今天正式开始搭建asch平台下的Dapp，目标是做一个建易的点对点的chat room,不过说不定也会改变这个主意，毕竟开发能力有限，但我会尽我所能开发好玩有趣的应用，写下博客，督促自己坚持下去。</p>
+        <h1 id="几个重要参数"><a href="#几个重要参数" class="headerlink" title="几个重要参数"></a>几个重要参数</h1><p>测试网络地址</p>
+<pre><code>testnet:http://localnet:4096
+</code></pre><p>dapp id号</p>
+<pre><code>id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43
+</code></pre><p>创世账号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">genisis account</span><br><span class="line">[ &#123; address: <span class="string">'AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS'</span>,</span><br><span class="line">    secret: <span class="string">'side olympic horse bag gate delay quick dash spice palm place employ'</span>,</span><br><span class="line">    publicKey: <span class="string">'ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825'</span> &#125; ]</span><br></pre></td></tr></table></figure>
+<h1 id="简单的命令测试"><a href="#简单的命令测试" class="headerlink" title="简单的命令测试"></a>简单的命令测试</h1><h2 id="区块地址"><a href="#区块地址" class="headerlink" title="区块地址"></a>区块地址</h2><h3 id="获取dapp区块高度"><a href="#获取dapp区块高度" class="headerlink" title="获取dapp区块高度"></a>获取dapp区块高度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -k -H <span class="string">"Content-Type: application/json"</span> -X GET http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/blocks/height &amp;&amp; <span class="built_in">echo</span></span><br></pre></td></tr></table></figure>
+<p>返回</p>
+<pre><code>{&quot;height&quot;:1480,&quot;success&quot;:true}
+</code></pre><h3 id="获取dapp区块数据"><a href="#获取dapp区块数据" class="headerlink" title="获取dapp区块数据"></a>获取dapp区块数据</h3><p>curl -k -H “Content-Type: application/json” -X GET <a href="http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/blocks?limit=1" target="_blank" rel="noopener">http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/blocks?limit=1</a> &amp;&amp; echo   </p>
+<p>{“blocks”:[{“id”:”de9473a861705bc6393dc59e244cea69a76ebfc955764bc618bfd616ec81ac03”,”timestamp”:0,”height”:1,”payloadLength”:105,”payloadHash”:”83bac4f7fefbbed8045b2e95010bdd286247f85c0f0e1a0fc02cb5fe8a7172cc”,”prevBlockId”:””,”pointId”:””,”pointHeight”:0,”delegate”:”ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825”,”signature”:”965ddf377bbf96818de16e67bdab27e7cad26f82d16ccdd55e41171738c192865cd566e580612184708ba8af0582dd2bf17f2093cea113df415509ccf5e1f107”,”count”:1}],”count”:1558,”success”:true}</p>
+<h2 id="账户accounts"><a href="#账户accounts" class="headerlink" title="账户accounts"></a>账户accounts</h2><h3 id="根据地址获取dapp内账户信息"><a href="#根据地址获取dapp内账户信息" class="headerlink" title="根据地址获取dapp内账户信息"></a>根据地址获取dapp内账户信息</h3><p>委托人账户信息查询<br>curl -k -H “Content-Type: application/json” -X GET <a href="http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/accounts/A2zpxdTgo2Fvtwhmm4KvJLyj1Vmgs7noZB" target="_blank" rel="noopener">http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/accounts/A2zpxdTgo2Fvtwhmm4KvJLyj1Vmgs7noZB</a> &amp;&amp; echo </p>
+<p>{“account”:{“balances”:[],”extra”:null,”isDelegate”:true},”success”:true}</p>
 <hr>
-<h2 id="简单流程"><a href="#简单流程" class="headerlink" title="简单流程"></a>简单流程</h2><p>按照给出的参考教程，一步步的搭建asch的开发环境，这里不在重复安装教程( <a href="https://github.com/AschPlatform/asch/blob/master/README.md" target="_blank" rel="noopener">Asch</a>),问题主要是出现在我自己搭建一个hello world的Dapp时候，</p>
-<pre><code>&gt; mkdir asch-test-dapp 
-&gt; cd asch-test-dapp 
-&gt; asch-cli dapps -a
------------------------------------------------------
-Dapp name              &gt; Double-Helix
-Enter DApp description &gt; Wish the motherland as soon as possible
-Enter DApp tags        &gt; DNA 0.01，asch, dapp
-Enter DApp link        &gt; https://github.com/houruixiang/Double-Helix/Double-Helix.zip
-Enter DApp icon url    &gt; http://p8hu3ca6r.bkt.clouddn.com/dna.jpg
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Enter public keys of dapp delegates </span><br><span class="line"></span><br><span class="line">[ &#123; address: <span class="string">'AGGajXq29996WgPFTmX8CnAkr1xnTR1YmA'</span>,</span><br><span class="line">    secret: <span class="string">'obscure into term trip uncover chicken between city amount couch skirt owner'</span>,</span><br><span class="line">    publicKey: <span class="string">'4421dec44945fe867c527b18cd72e89c15398301a2280b0a9916f2854bf660d3'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'A9tStNz4aK52AzHTTZPQctPvYrj6ETDSY2'</span>,</span><br><span class="line">    secret: <span class="string">'water rebuild hospital over distance siege this cement long knife hair flock'</span>,</span><br><span class="line">    publicKey: <span class="string">'f9349bd2406b8fe5182ccde695525fabb683d275d2969ec42193e75518cc49d9'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'A8xtzsqKMrg9Rz8z4n7aCupA5N5XQ8xtWP'</span>,</span><br><span class="line">    secret: <span class="string">'fruit dolphin equip fatal clever chicken bubble pair visit rare fiction pair'</span>,</span><br><span class="line">    publicKey: <span class="string">'1ba142b41223546c370bca19f5901647bea1ce20c88f9bfeb7377d14fbfb7aff'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'A7tXgk3ifaHtVCGkNCnSGFDYrbZoaUVKy9'</span>,</span><br><span class="line">    secret: <span class="string">'album side never submit negative rent priority rubber sting vacant license fog'</span>,</span><br><span class="line">    publicKey: <span class="string">'72ded9c535b8754c6d3dd864168c314f9582c9e5b65cea376ba28ecea51aedbe'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'ACDwUaNJGzP81ciX8DHwpogwuT1CA9vmsp'</span>,</span><br><span class="line">    secret: <span class="string">'power protect notice convince morning stove engine inmate joke stone pen paper'</span>,</span><br><span class="line">    publicKey: <span class="string">'a59aeefee795e6684428b429a835834a8bd5a85a3ab0a5495f21711afd2b034b'</span> &#125; ]</span><br></pre></td></tr></table></figure>
-<pre><code>Enter master secret of your genesis account &gt; major orange chair orbit rice biology fame average rotate craft hole police
-Enter asset name, for example               &gt; CHROMO
-20481024512
-8
-</code></pre><p>以上这些都是没有什么困难，但是信息要保存好，丢了就惨了。<br>需要说明以下，这个账户即使公钥与私钥生成的账户，这个跟所有的数字货币都是一样的概念，只有当你把这些人的账户信息配置到你的<br>DAPP工程下的时候，他们才是委托人，就是这个概念，别的没有什么。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; asch-cli crypto -g</span><br><span class="line">[ &#123; address: <span class="string">'AQHyfWSX7MNQtyBUHWxg7K28r8S2SvkcaN'</span>,</span><br><span class="line">    secret: <span class="string">'human bone dish tongue ship chronic segment poet universe share absorb excite'</span>,</span><br><span class="line">    publicKey: <span class="string">'1cb1638349a9c6bf460b68bfc0878f5175082fb41a53ff884c4d7f1667030040'</span> &#125; ]</span><br><span class="line"></span><br><span class="line">创世账户</span><br><span class="line">“ someone manual strong movie roof episode eight spatial brown soldier soup motor ”</span><br><span class="line">登陆（该账户中有初始发行的1亿xas token），</span><br><span class="line">然后给 AQHyfWSX7MNQtyBUHWxg7K28r8S2SvkcaN 地址转10000个xas</span><br></pre></td></tr></table></figure></p>
-<p>问题就处在这里，这个转账操作不是像 <a href="https://github.com/AschPlatform/asch/blob/master/docs/dapp_docs/1_hello.md" target="_blank" rel="noopener">Dapp开发教程一 Asch Dapp Hello World</a>介绍的那样是一个固定账户，而应该是一个你自己生成的账户，<code>asch-cli crypto -g</code>生成的<code>secret</code>可以作为主密钥直接登陆钱包，<code>address</code>是创世账户转账地址，然后就OK了。</p>
-<pre><code>&gt; asch-cli registerdapp -f dapp.json -e &quot;human bone dish tongue ship chronic segment poet universe share absorb excite&quot;
-</code></pre><p>输出</p>
-<pre><code>id = 1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db
-</code></pre><p>这个id非常重要，是以后访问DAPP的id,也是调试的界面，其中</p>
-<p>查看生成所有的Dapp的信息</p>
-<pre><code>http://localhost:4096/api/dapps
-</code></pre><p>查看指定id的Dapp的信息</p>
-<pre><code>http://localhost:4096/api/dapps/get?id=1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db
-</code></pre><h2 id="几个账户的意义"><a href="#几个账户的意义" class="headerlink" title="几个账户的意义"></a>几个账户的意义</h2><pre><code>创世账户: someone manual strong movie roof episode eight spatial brown soldier soup motor
-</code></pre><p>这个是testnet作为测试使用的，里面有几亿个 xas。</p>
-<pre><code>genesis account: major orange chair orbit rice biology fame average rotate craft hole police
-</code></pre><p>这个是我们创建Dapp时候的创世账户，具体什么意思怎么使用，我也不知道，我就简单的设置了也给账号，看以后吧。</p>
-<pre><code>dapp account: human bone dish tongue ship chronic segment poet universe share absorb excite
-</code></pre><p>这个是转账的账号，这个账号里面可以看到我们创建的Dapp,嗯，大概就是这样子。</p>
-<p>2018年5月15日13点09分<br>这个是官方给出的标准流程 <a href="https://www.zybuluo.com/zhenxi/note/1030296" target="_blank" rel="noopener">Asch DAPP核心开发流程解析</a> 其中有这样一段落，我们来细究一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">3.1 发行资产（UIA）</span><br><span class="line">发行自己的资产，请参考这个链接http://docs.asch.mobi/docs/asch_issue_assets.html。 </span><br><span class="line">这里我们在钱包页面生成一个新账户A，主密码为“almost journey future similar begin <span class="built_in">type</span> write celery girl month forget breeze”，对应的地址是AAjoobuMcmkQ1gS8vTfBy3dQavBiH7sBCF，该账户将作为下面的cctime.XCT资产发行者、cctime DAPP的注册者以及给其它账户转账的发送者，创世账户给该地址转1000个xas。</span><br><span class="line"></span><br><span class="line">A账户去注册发行商cctime，然后注册一个资产XCT（上限100亿，精度8，描述为：cctime.org的token时讯币，其它用默认的），最后发行10亿的cctime.XCT。</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">``` bash </span><br><span class="line">3.2 利用模板启动第一个DAPP</span><br><span class="line">Asch作为一个区块链开发平台，为开发者提供了一个安全且高性能的虚拟机（asch-sandbox）以及一系列的内部接口、框架等。其中的一个脚手架就是利用模板来生成自定义的DAPP，通过回答几个问题就可以完成DAPP框架代码的开发工作。 </span><br><span class="line">模板包含了启动一个dapp需要的最少数据</span><br><span class="line"></span><br><span class="line">3.2.1 生成DAPP元信息(创世块）</span><br><span class="line"></span><br><span class="line">// 生成5个受托人账号</span><br><span class="line">zhenxi@MiAir:~/Codes/github/AschPlatform/asch$ asch-cli crypto -g</span><br><span class="line">? Enter number of accounts to generate 5</span><br><span class="line">[ &#123; address: <span class="string">'A9pDhjc7NuYMWYLxkgAgVmHE2NQ7diMcWX'</span>,</span><br><span class="line">    secret: <span class="string">'fit night someone unveil dwarf believe middle evidence puzzle hotel common choose'</span>,</span><br><span class="line">    publicKey: <span class="string">'afdf69f0da9ff333218f2cd10cb0a907c2e76788f752b799cb1dab3a9f03bf63'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'A2jvQUNowLgP9hHMN3tSCAUkakuigGRytB'</span>,</span><br><span class="line">    secret: <span class="string">'lawsuit ride civil slice kitchen unfold unable lumber prevent suspect finger chunk'</span>,</span><br><span class="line">    publicKey: <span class="string">'67d52a0265f9e5366660c8b384cee56d3f8b5737b2dd3c617d22df83b5ebef02'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'A7JjHgx7ACCJ6AxypBn4Qt9NrGaY4JuZDF'</span>,</span><br><span class="line">    secret: <span class="string">'absurd sweet blast dinner battle zero ladder steak coral fork venture coffee'</span>,</span><br><span class="line">    publicKey: <span class="string">'39c2322600a0c81ecfa97119ec8e2d5bfb73394914d92b54e961846a987e4e22'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'AMu7kuP9TjywkUQQQgALid96So2VCve5QB'</span>,</span><br><span class="line">    secret: <span class="string">'topic ramp throw cloud moment jungle bar series task protect erupt answer'</span>,</span><br><span class="line">    publicKey: <span class="string">'4740d2c16bf6c5a174eba1e0f859253a64851d30acbc9655b01394af82d3e325'</span> &#125;,</span><br><span class="line">  &#123; address: <span class="string">'A9BzaJDkyzb9RVAFjsePMemSVXMDLiQpjJ'</span>,</span><br><span class="line">    secret: <span class="string">'shoot tired know dish rally kiwi snack patrol bunker ocean panel this'</span>,</span><br><span class="line">    publicKey: <span class="string">'b433c226645981477642491f77de7b8d63274aa51f932bbe1fe3f445a8aaecc9'</span> &#125; ]</span><br><span class="line">Done</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">// 根据模板和自定义参数生成自己的dapp框架，包含创世块、配置文件、数据和合约、接口、日志等目录</span><br><span class="line"><span class="built_in">cd</span> dapps </span><br><span class="line">mkdir cctime &amp;&amp; <span class="built_in">cd</span> cctime</span><br><span class="line">zhenxi@MiAir:~/Codes/github/AschPlatform/asch/dapps$ asch-cli dapps -a</span><br><span class="line">Copying template to the current directory ...</span><br><span class="line">? Enter DApp name cctime</span><br><span class="line">? Enter DApp description cctime.org</span><br><span class="line">? Enter DApp tags news</span><br><span class="line">? Choose DApp category News</span><br><span class="line">? Enter DApp link http://github/aschplatform/cctime.zip</span><br><span class="line">? Enter DApp icon url http://a.com/x.png</span><br><span class="line">? Enter public keys of dapp delegates - hex array, use <span class="string">','</span> <span class="keyword">for</span> separator afdf69f0da9ff333218f2cd10cb0a907c2e76788f752b799cb1dab3a9f03bf63,67d52a0265f9e5366660c8b384cee56d3f8b5737b2dd3c617d22</span><br><span class="line">df83b5ebef02,39c2322600a0c81ecfa97119ec8e2d5bfb73394914d92b54e961846a987e4e22,4740d2c16bf6c5a174eba1e0f859253a64851d30acbc9655b01394af82d3e325,b433c226645981477642491f77de7b8d63274aa51f932bb</span><br><span class="line">e1fe3f445a8aaecc9</span><br><span class="line">? How many delegates are needed to unlock asset of a dapp? 3</span><br><span class="line">DApp meta information is saved to ./dapp.json ...</span><br><span class="line">? Enter master secret of your genesis account [hidden] //这里输入的密码为：<span class="string">'almost journey future similar begin type write celery girl month forget breeze'</span></span><br><span class="line">? Do you want publish a inbuilt asset <span class="keyword">in</span> this dapp? Yes</span><br><span class="line">? Enter asset name, <span class="keyword">for</span> example: BTC, CNY, USD, MYASSET XCT</span><br><span class="line">? Enter asset total amount 100000000</span><br><span class="line">? Enter asset precision 8</span><br><span class="line">New genesis block is created at: ./genesis.json</span><br><span class="line">// 生成的文件如下</span><br><span class="line">zhenxi@MiAir:~/Codes/github/AschPlatform/asch/dapps/cctime$ ls</span><br><span class="line">config.json  contract  dapp.json  genesis.json  init.js  interface  model  public</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3.2.2 注册DAPP到localnet上</span><br><span class="line">zhenxi@MiAir:~/Codes/github/AschPlatform/asch/dapps/cctime$ asch-cli registerdapp -f dapp.json -e <span class="string">"almost journey future similar begin type write celery girl month forget breeze"</span></span><br><span class="line">// 返回结果为dappId</span><br><span class="line">75d084dc91221b380e7a3c6b3b7467935572b4ebaa1e9a3db91e1239377c1fed</span><br></pre></td></tr></table></figure>
-<p>这样就非常清晰了。<br>新账户A，主密码为“almost journey future similar begin type write celery girl month forget breeze”，对应的地址是AAjoobuMcmkQ1gS8vTfBy3dQavBiH7sBCF，</p>
-<p><strong>该账户将作为下面的cctime.XCT资产发行者、cctime DAPP的注册者以及给其它账户转账的发送者，创世账户给该地址转1000个xas。<br>A账户去注册发行商cctime，然后注册一个资产XCT（上限100亿，精度8，描述为：cctime.org的token时讯币，其它用默认的），最后发行10亿的cctime.XCT。</strong></p>
-<p>当初就是对这段理解不够啊，说的非常详细了。在测试环境下testnet，账户A想要发行一个Dapp和数字资产，当然也理所应当的把Dapp注册到账户A下面，但是这个时候账户A没有阿希币XAS，那么asch的开发这在自己的创世区块 <code>someone manual strong movie roof episode eight spatial brown soldier soup motor</code> 下给了一个亿的xas，这个只要你在本地安装好asch的生产环境都可以访问到。<br>因此，第一步才需要从创世区块下向账户A转出一定的xas,这样账户A就有了足够的xas发行代币了。我的天啊，我居然花费了两天才明白了asch团队的苦心，也是醉了。</p>
-<p>其余的使用 <code>asch-cli crypto -g</code> 生成的账户都可以看成一般用户，可以用来转账的，注册Dapp时候填写的委托人也只是DPOS共识机制所要求的（3-101个委托人）。</p>
+<p>curl -k -H “Content-Type: application/json” -X GET <a href="http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/accounts/AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS" target="_blank" rel="noopener">http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/accounts/AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS</a> &amp;&amp; echo </p>
+<p>{“account”:{“balances”:[{“currency”:”XCT”,”balance”:”10000000000000000”},{“currency”:”XAS”,”balance”:”100000000000”},{“currency”:”xctime.XCT”,”balance”:”2100000000000”}],”extra”:null,”isDelegate”:false},”success”:true}</p>
+<p>curl -k -H “Content-Type: application/json” -X GET <a href="http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/contracts" target="_blank" rel="noopener">http://localhost:4096/api/dapps/cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43/contracts</a> &amp;&amp; echo  </p>
+<h1 id="存储storages"><a href="#存储storages" class="headerlink" title="存储storages"></a>存储storages</h1><p>我发现这个命令还是非常有意思的，这个是不是就是chat room的原型呢？不管这么多了，先去调试一下，看看有什么好玩的东西可以做。</p>
+<h2 id="上传数据"><a href="#上传数据" class="headerlink" title="上传数据"></a>上传数据</h2><h3 id="上传数据-直接上传"><a href="#上传数据-直接上传" class="headerlink" title="上传数据(直接上传)"></a>上传数据(直接上传)</h3><p>接口地址：<code>/api/storages</code><br>请求方式：<code>PUT</code><br>支持格式：<code>json</code><br>接口备注：<br>请求参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">必填</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">secret</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">asch账户密码</td>
+</tr>
+<tr>
+<td style="text-align:left">secondSecret</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">发送二级密码，最小长度1，最大长度100</td>
+</tr>
+<tr>
+<td style="text-align:left">content</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">上传数据内容</td>
+</tr>
+<tr>
+<td style="text-align:left">encode</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">上传数据格式，可选项为：raw/base64/hex</td>
+</tr>
+<tr>
+<td style="text-align:left">wait</td>
+<td style="text-align:center">number</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">等待确认数，范围为0-6，默认为0。wait为0表示不等待，速度最快，但无法保证数据在掉电情况下不丢失，大于2时，可以100%确保数据已经同步到大部分机器上了，但需要时间较长10-20秒之间，折中的方案是1,wait为1时虽然不能100%保证同步到其他机器，但失败的几率非常小，只是理论上存在，实际上还没遇到过</td>
+</tr>
+</tbody>
+</table>
+<p>返回参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">是否成功获得response数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">transactionId</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">交易ID</td>
+</tr>
+</tbody>
+</table>
+<p>调出nodejs调试窗口</p>
+<pre><code>&gt;node
+</code></pre><p>将字符串”helloworld”用base64进行编码</p>
+<pre><code>console.log(new Buffer(&apos;helloworld&apos;).toString(&apos;base64&apos;));
+</code></pre><p>返回结果</p>
+<pre><code>aGVsbG93b3JsZA==
+</code></pre><p> Asch用base64方式存储刚才得到的编码值”aGVsbG93b3JsZA==”,不过要首先推出<code>node</code>.</p>
+<pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X PUT -d &apos;{&quot;secret&quot;:&quot;side olympic horse bag gate delay quick dash spice palm place employ&quot;,&quot;secondSecret&quot;:&quot; &quot;,&quot;content&quot;:&quot;aGVsbG93b3JsZA==&quot;,&quot;encode&quot;:&quot;base64&quot;,&quot;wait&quot;:1}&apos; http://localhost:4096/api/storages &amp;&amp; echo
+</code></pre><p>JSON返回示例：</p>
+<pre><code>{&quot;success&quot;:true,&quot;transactionId&quot;:&quot;7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2&quot;}
+</code></pre><h4 id="根据交易id查询存储的数据-1"><a href="#根据交易id查询存储的数据-1" class="headerlink" title="根据交易id查询存储的数据-1"></a>根据交易id查询存储的数据-1</h4><p>接口地址：<code>/api/storages/get</code><br>请求方式：<code>GET</code><br>支持格式：<code>urlencode</code><br>请求参数说明：</p>
+<p>请求示例：</p>
+<pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X GET http://localhost:4096/api/storages/get/?id=7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2 &amp;&amp; echo   
+</code></pre><p>JSON返回示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"success"</span>:<span class="literal">true</span>,<span class="string">"id"</span>:<span class="string">"7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2"</span>,<span class="string">"height"</span>:<span class="string">"16889"</span>,</span><br><span class="line"><span class="string">"blockId"</span>:<span class="string">"4b44dd9fffd5c76b5f0f04089202e916bc708f80e526c259f2cccd425b6af838"</span>,<span class="string">"type"</span>:8,</span><br><span class="line"><span class="string">"timestamp"</span>:59467003,<span class="string">"senderPublicKey"</span>:<span class="string">"ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825"</span>,</span><br><span class="line"><span class="string">"senderId"</span>:<span class="string">"AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS"</span>,<span class="string">"recipientId"</span>:<span class="string">""</span>,<span class="string">"amount"</span>:0,<span class="string">"fee"</span>:10000000,</span><br><span class="line"><span class="string">"signature"</span>:<span class="string">"9e3fe223a7f5235a079694539414d22bb1939131f70e4fcbedc68264b96c7f13d13632bca0135ddcc3a3d774be5611319e7251341b8eb89caba27f18aae26f01"</span>,</span><br><span class="line"><span class="string">"signSignature"</span>:<span class="string">""</span>,<span class="string">"signatures"</span>:null,</span><br><span class="line"><span class="string">"confirmations"</span>:<span class="string">"18"</span>,<span class="string">"args"</span>:null,</span><br><span class="line"><span class="string">"asset"</span>:&#123;<span class="string">"storage"</span>:&#123;<span class="string">"content"</span>:<span class="string">"68656c6c6f776f726c64"</span>&#125;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="根据交易id查询存储的数据-2"><a href="#根据交易id查询存储的数据-2" class="headerlink" title="根据交易id查询存储的数据-2"></a>根据交易id查询存储的数据-2</h4><p>接口地址：<code>/api/storages/:id</code><br>请求方式：<code>GET</code><br>支持格式：<code>urlencode</code><br>请求参数说明：交易<code>id</code><br>备注：与<code>/api/storages/get</code>功能相同</p>
+<p>请求示例：</p>
+<pre><code>curl -k -H &quot;Content-Type: application/json&quot; -X GET http://localhost:4096/api/storages/7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2 &amp;&amp; echo   
+</code></pre><p>JSON返回示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"success"</span>:<span class="literal">true</span>,<span class="string">"id"</span>:<span class="string">"7672ea42e5607c2730a4c3d14f1e340da5b035ade8afee33464345cf69d785b2"</span>,<span class="string">"height"</span>:<span class="string">"16889"</span>,<span class="string">"blockId"</span>:<span class="string">"4b44dd9fffd5c76b5f0f04089202e916bc708f80e526c259f2cccd425b6af838"</span>,<span class="string">"type"</span>:8,<span class="string">"timestamp"</span>:59467003,<span class="string">"senderPublicKey"</span>:<span class="string">"ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825"</span>,<span class="string">"senderId"</span>:<span class="string">"AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS"</span>,<span class="string">"recipientId"</span>:<span class="string">""</span>,<span class="string">"amount"</span>:0,<span class="string">"fee"</span>:10000000,<span class="string">"signature"</span>:<span class="string">"9e3fe223a7f5235a079694539414d22bb1939131f70e4fcbedc68264b96c7f13d13632bca0135ddcc3a3d774be5611319e7251341b8eb89caba27f18aae26f01"</span>,<span class="string">"signSignature"</span>:<span class="string">""</span>,<span class="string">"signatures"</span>:null,<span class="string">"confirmations"</span>:<span class="string">"40"</span>,<span class="string">"args"</span>:null,<span class="string">"asset"</span>:&#123;<span class="string">"storage"</span>:&#123;<span class="string">"content"</span>:<span class="string">"68656c6c6f776f726c64"</span>&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="上传数据-签名后再上传"><a href="#上传数据-签名后再上传" class="headerlink" title="上传数据(签名后再上传)"></a>上传数据(签名后再上传)</h3><p>POST接口规格如下： <code>payload</code>为<code>asch-js</code>创建出来的交易数据 接口地址：<code>/peer/transactions</code><br>请求方式：<code>post</code><br>支持格式：<code>json</code><br>请求参数说明：<br>|名称|类型|必填|说明|<br>|:—|:—:|:—:|:—|<br>|secret|string|Y|asch账户密码|<br>|secondSecret|string|N|发送者二级密码，最小长度1，最大长度100|<br>|content|string|Y|上传数据内容，必须是hex格式|</p>
+<p>返回参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">是否成功获得response数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">transactionId</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">交易ID</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; var AschJS = require(<span class="string">'asch-js'</span>);</span><br><span class="line"></span><br><span class="line">// 一级密码</span><br><span class="line">&gt; var secret = <span class="string">'side olympic horse bag gate delay quick dash spice palm place employ'</span></span><br><span class="line"></span><br><span class="line">// 二级密码</span><br><span class="line">&gt; var secondSecret = <span class="string">'ruihou123'</span></span><br><span class="line"></span><br><span class="line">// 将字符串<span class="string">"helloworld"</span>用 hex 进行编码</span><br><span class="line">&gt; var content = new Buffer(<span class="string">'hello world'</span>).toString(<span class="string">'hex'</span>)</span><br><span class="line"><span class="string">'68656c6c6f20776f726c64'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Asch用hex方式存储刚才得到的编码值<span class="string">"aGVsbG93b3JsZA=="</span></span><br><span class="line">&gt; var trs = AschJS.storage.createStorage(content, secret, secondSecret)</span><br><span class="line">&#123; <span class="built_in">type</span>: 8,</span><br><span class="line">  amount: 0,</span><br><span class="line">  fee: 10000000,</span><br><span class="line">  recipientId: null,</span><br><span class="line">  senderPublicKey: <span class="string">'ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825'</span>,</span><br><span class="line">  timestamp: 59473015,</span><br><span class="line">  asset: &#123; storage: &#123; content: <span class="string">'68656c6c6f20776f726c64'</span> &#125; &#125;,</span><br><span class="line">  signature: <span class="string">'e5b72c2773e7067fb81ee96627d4164b39d1e54926aec005e8e3c6cab07f2ba1f81931aad93e3f215a7c99bd1d3fd6470e8993043211e03fd044de9f16780d09'</span>,</span><br><span class="line">  signSignature: <span class="string">'1633a4f5b6ef14d4b6a237211b998f50bd98780da87abbc2f8bfd7461ae8b75322f64d04b1852fac9adce140dd4054d76fc8d7509cb7617642972126d9282906'</span>,</span><br><span class="line">  id: <span class="string">'88f5602eddf2b019af6b8383e1c3816ef15591ce273a972f3ba9542c8ce1a23e'</span> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; console.log(JSON.stringify(trs))</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"type"</span>:8,</span><br><span class="line"><span class="string">"amount"</span>:0,</span><br><span class="line"><span class="string">"fee"</span>:10000000,</span><br><span class="line"><span class="string">"recipientId"</span>:null,</span><br><span class="line"><span class="string">"senderPublicKey"</span>:<span class="string">"ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825"</span>,</span><br><span class="line"><span class="string">"timestamp"</span>:59473015,</span><br><span class="line"><span class="string">"asset"</span>:&#123;<span class="string">"storage"</span>&#123;<span class="string">"content"</span>:<span class="string">"68656c6c6f20776f726c64"</span>&#125;&#125;,</span><br><span class="line"><span class="string">"signature"</span>:<span class="string">"e5b72c2773e7067fb81ee96627d4164b39d1e54926aec005e8e3c6cab07f2ba1f81931aad93e3f215a7c99bd1d3fd6470e8993043211e03fd044de9f16780d09"</span>,</span><br><span class="line"><span class="string">"signSignature"</span>:<span class="string">"1633a4f5b6ef14d4b6a237211b998f50bd98780da87abbc2f8bfd7461ae8b75322f64d04b1852fac9adce140dd4054d76fc8d7509cb7617642972126d9282906"</span>,</span><br><span class="line"><span class="string">"id"</span>:<span class="string">"88f5602eddf2b019af6b8383e1c3816ef15591ce273a972f3ba9542c8ce1a23e"</span></span><br><span class="line">&#125;</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure>
 <hr>
-<p>至于发行资产，我现在的理解是，在注册Dapp时候发行的那个是Dapp内部的资产，之内在Dapp内部使用，但是我设置的好像是20481024512，超过了一亿，没有正确加载出来，我还是要在搞一下。</p>
-<h2 id="资产再探究"><a href="#资产再探究" class="headerlink" title="资产再探究"></a>资产再探究</h2><p>Dapp的创世块中可以创建内置资产，但不是必须的，内置资产无法跨链转账，只能在链内使用。在主链发行的UIA（用户自定义资产）可以充值到任意dapp中，也可从dapp提现到主链，这是dapp内置资产和UIA最大的区别。“一链多币，一币多链”指的就是主链可以发行多个UIA，而每个UIA都可以充值到多个dapp中。</p>
-<h2 id="进一步开发调试"><a href="#进一步开发调试" class="headerlink" title="进一步开发调试"></a>进一步开发调试</h2><p>使用浏览器打开<br><a href="http://localhost:4096/dapps/1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db/，" target="_blank" rel="noopener">http://localhost:4096/dapps/1543fba6d566ebcdfd5d485deb7653473c166ea5ae93de151ff9e1edd92410db/，</a><br>可以访问默认的一个前端页面，该页面可以进行一些简单的接口测试</p>
-<hr>
-<ol>
-<li><p><a href="https://github.com/AschPlatform/asch/blob/master/README.md" target="_blank" rel="noopener">Asch</a></p>
-</li>
-<li><p><a href="https://github.com/AschPlatform/asch/blob/master/docs/dapp_docs/1_hello.md" target="_blank" rel="noopener">Dapp开发教程一 Asch Dapp Hello World</a></p>
-</li>
-<li><p><a href="https://bbs.asch.io/topic/4757/%E6%96%B0%E6%89%8B%E6%90%AD%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%8F%91%E5%B8%83dapp%E6%95%99%E7%A8%8B" target="_blank" rel="noopener">新手搭环境与发布dapp教程</a></p>
-</li>
-<li><p><a href="https://www.zybuluo.com/zhenxi/note/1030296" target="_blank" rel="noopener">Asch DAPP核心开发流程解析</a></p>
-</li>
+<p>// 将生成的交易信息广播出去，有问题阿</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">curl -H <span class="string">"Content-Type: application/json"</span> -H <span class="string">"magic:594fe0f3"</span> -H <span class="string">"version:''"</span> -k -X POST -d </span><br><span class="line"><span class="string">'&#123;"transaction":</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">"type":8,</span></span><br><span class="line"><span class="string">"amount":0,</span></span><br><span class="line"><span class="string">"fee":10000000,</span></span><br><span class="line"><span class="string">"recipientId":null,</span></span><br><span class="line"><span class="string">"senderPublicKey":"fafcd01f6b813fdeb3c086e60bc7fa9bfc8ef70ae7be47ce0ac5d06e7b1a8575",</span></span><br><span class="line"><span class="string">"timestamp":59471824,</span></span><br><span class="line"><span class="string">"asset":&#123;"storage":&#123;"content":"68656c6c6f20776f726c64"&#125;&#125;,</span></span><br><span class="line"><span class="string">"__assetBytes__":&#123;"type":"Buffer","data"[]&#125;,</span></span><br><span class="line"><span class="string">"signature":"e5b72c2773e7067fb81ee96627d4164b39d1e54926aec005e8e3c6cab07f2ba1f81931aad93e3f215a7c99bd1d3fd6470e8993043211e03fd044de9f16780d09",</span></span><br><span class="line"><span class="string">"signSignature":"1633a4f5b6ef14d4b6a237211b998f50bd98780da87abbc2f8bfd7461ae8b75322f64d04b1852fac9adce140dd4054d76fc8d7509cb7617642972126d9282906"&#125;&#125;'</span> <span class="string">'http://localhost:4096/peer/transactions'</span> &amp;&amp; <span class="built_in">echo</span></span><br></pre></td></tr></table></figure>
+<p>请求示例：</p>
+<pre><code>&gt; curl -H &quot;Content-Type: application/json&quot; -H &quot;magic:594fe0f3&quot; -H &quot;version:&apos;&apos;&quot; -k -X POST -d &apos;{&quot;transaction&quot;:{&quot;type&quot;:8,&quot;amount&quot;:0,&quot;fee&quot;:10000000,&quot;recipientId&quot;:null,&quot;senderPublicKey&quot;:&quot;fafcd01f6b813fdeb3c086e60bc7fa9bfc8ef70ae7be47ce0ac5d06e7b1a8575&quot;,&quot;timestamp&quot;:59471824,&quot;asset&quot;:{&quot;storage&quot;:{&quot;content&quot;:&quot;68656c6c6f20776f726c64&quot;}},&quot;__assetBytes__&quot;:{&quot;type&quot;:&quot;Buffer&quot;,&quot;data&quot;[]},&quot;signature&quot;:&quot;e5b72c2773e7067fb81ee96627d4164b39d1e54926aec005e8e3c6cab07f2ba1f81931aad93e3f215a7c99bd1d3fd6470e8993043211e03fd044de9f16780d09&quot;,&quot;signSignature&quot;:&quot;1633a4f5b6ef14d4b6a237211b998f50bd98780da87abbc2f8bfd7461ae8b75322f64d04b1852fac9adce140dd4054d76fc8d7509cb7617642972126d9282906&quot;}}&apos; &apos;http://localhost:4096/peer/transactions&apos; &amp;&amp; echo
+</code></pre><p>JSON返回示例：</p>
+<pre><code>{&quot;success&quot;:false,&quot;error&quot;:&quot;SyntaxError: Unexpected token [ in JSON at position 273&quot;}
+</code></pre><p>再次尝试，请求示例：</p>
+<pre><code>curl -H &quot;Content-Type: application/json&quot; -H &quot;magic:594fe0f3&quot; -H &quot;version:&apos;&apos;&quot; -k -X POST -d &apos;{&quot;transaction&quot;:{&quot;type&quot;:8,&quot;amount&quot;:0,&quot;fee&quot;:10000000,&quot;recipientId&quot;:null,&quot;senderPublicKey&quot;:&quot;fafcd01f6b813fdeb3c086e60bc7fa9bfc8ef70ae7be47ce0ac5d06e7b1a8575&quot;,&quot;timestamp&quot;:59471824,&quot;asset&quot;:{&quot;storage&quot;:{&quot;content&quot;:&quot;68656c6c6f20776f726c64&quot;}},&quot;signature&quot;:&quot;e5b72c2773e7067fb81ee96627d4164b39d1e54926aec005e8e3c6cab07f2ba1f81931aad93e3f215a7c99bd1d3fd6470e8993043211e03fd044de9f16780d09&quot;,&quot;signSignature&quot;:&quot;1633a4f5b6ef14d4b6a237211b998f50bd98780da87abbc2f8bfd7461ae8b75322f64d04b1852fac9adce140dd4054d76fc8d7509cb7617642972126d9282906&quot;}}&apos; &apos;http://localhost:4096/peer/transactions&apos; &amp;&amp; echo
+</code></pre><p>JSON返回示例：</p>
+<pre><code>{&quot;success&quot;:false,&quot;error&quot;:&quot;Failed to verify signature&quot;}
+</code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://github.com/AschPlatform/asch/blob/master/docs/asch_http_interface.md" target="_blank" rel="noopener">ASCH HTTP API文档</a></li>
 </ol>
 
       
@@ -531,7 +616,7 @@ Enter asset name, for example               &gt; CHROMO
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://ruihou.me/2018/05/14/asch-hello-world/" title="Asch开发日志 0x00 --- 搭建 hello world开发环境">http://ruihou.me/2018/05/14/asch-hello-world/</a>
+    <a href="http://ruihou.me/2018/05/17/debug-20180517-md/" title="Asch开发日志 0x04 --- ASCH HTTP API文档">http://ruihou.me/2018/05/17/debug-20180517-md/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -592,8 +677,8 @@ Enter asset name, for example               &gt; CHROMO
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/12/Markdown improve/" rel="next" title="完善博客实用功能">
-                <i class="fa fa-chevron-left"></i> 完善博客实用功能
+              <a href="/2018/05/15/asch-related-algo/" rel="next" title="Asch开发日志 0x03 --- Asch相关算法">
+                <i class="fa fa-chevron-left"></i> Asch开发日志 0x03 --- Asch相关算法
               </a>
             
           </div>
@@ -601,10 +686,6 @@ Enter asset name, for example               &gt; CHROMO
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/15/asch-hello-world-deep-md/" rel="prev" title="Asch开发日志 0x01 --- Dapp教程">
-                Asch开发日志 0x01 --- Dapp教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -785,7 +866,7 @@ Enter asset name, for example               &gt; CHROMO
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单流程"><span class="nav-number">1.</span> <span class="nav-text">简单流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个账户的意义"><span class="nav-number">2.</span> <span class="nav-text">几个账户的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资产再探究"><span class="nav-number">3.</span> <span class="nav-text">资产再探究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进一步开发调试"><span class="nav-number">4.</span> <span class="nav-text">进一步开发调试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#几个重要参数"><span class="nav-number">1.</span> <span class="nav-text">几个重要参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的命令测试"><span class="nav-number">2.</span> <span class="nav-text">简单的命令测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区块地址"><span class="nav-number">2.1.</span> <span class="nav-text">区块地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取dapp区块高度"><span class="nav-number">2.1.1.</span> <span class="nav-text">获取dapp区块高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取dapp区块数据"><span class="nav-number">2.1.2.</span> <span class="nav-text">获取dapp区块数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#账户accounts"><span class="nav-number">2.2.</span> <span class="nav-text">账户accounts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根据地址获取dapp内账户信息"><span class="nav-number">2.2.1.</span> <span class="nav-text">根据地址获取dapp内账户信息</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储storages"><span class="nav-number">3.</span> <span class="nav-text">存储storages</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#上传数据"><span class="nav-number">3.1.</span> <span class="nav-text">上传数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上传数据-直接上传"><span class="nav-number">3.1.1.</span> <span class="nav-text">上传数据(直接上传)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#根据交易id查询存储的数据-1"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">根据交易id查询存储的数据-1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据交易id查询存储的数据-2"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">根据交易id查询存储的数据-2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传数据-签名后再上传"><span class="nav-number">3.1.2.</span> <span class="nav-text">上传数据(签名后再上传)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
