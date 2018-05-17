@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T08:58:06.561Z">
+<meta property="og:updated_time" content="2018-05-17T08:59:23.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x04 --- ASCH HTTP API文档">
 <meta name="twitter:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,336
+                  2,285
                 </span>
               
 
@@ -637,7 +637,120 @@ hello world.\n
 <li>注册委托人，我的dapp明明是5个，怎么还是有101委托人个生产区块？</li>
 <li>。。。。</li>
 </ul>
-<h1 id="附录：-Asch主链交易类型"><a href="#附录：-Asch主链交易类型" class="headerlink" title="附录： Asch主链交易类型"></a>附录： Asch主链交易类型</h1><p><style><br>table th:first-of-type {<br>    width: 10px;<br>}<br></style><br>|名称|    值    |英文备注    |中文备注|<br>|:-|:-:|:—:|:—:|:—:|<br>|SEND    |0    |XAS TRANSFER|    XAS转账|<br>|SIGNATURE    |1|    SETUP SECOND_PASSWORD    |设置二级密码|<br>|DELEGATE    |2|    SECOND_PASSWORD    |注册受托人|<br>|VOTE    |3|    VOTE FOR DELEGATE    |给受托人投票|<br>|MULTI    |4|    MULTISIGNATURE    |多重签名|<br>|DAPP    |5|    DAPP REGISTER|    DAPP注册|<br>|IN_TRANSFER    |6|    DAPP DEPOSIT|    DAPP充值,把资产从主链转入到DAPP上|<br>|OUT_TRANSFER    |7|    DAPP WITHDRAW|    DAPP提币,把资产从DAPP转出到主链上|<br>|STORAGE    |8|    UPLOAD STORAGE|    小文件存储上传到区块链|<br>|UIA_ISSUER    |9|    UIA ISSUER REGISTER|    用户自定义资产发行商注册|<br>|UIA_ASSET    |10|    UIA ASSET REGISTER    |用户自定义资产注册|<br>|UIA_FLAGS    |11|    UIA FLAGS UPDATE    |用户自定义资产旗标更新|<br>|UIA_ACL    |12|    UIA ACL UPDATE    |用户自定义资产访问控制列表更新|<br>|UIA_ISSUE    |13|    UIA ISSUE    |用户自定义资产发行|<br>|UIA_TRANSFER    |14|    UIA TRANSFER|    用户自定义资产转账|<br>|LOCK    |100    |ACCOUNT LOCK    |账户锁仓</p>
+<h1 id="附录：-Asch主链交易类型"><a href="#附录：-Asch主链交易类型" class="headerlink" title="附录： Asch主链交易类型"></a>附录： Asch主链交易类型</h1><style>
+table th:first-of-type {
+    width: 10px;
+}
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:center">值</th>
+<th style="text-align:center">英文备注</th>
+<th style="text-align:center">中文备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SEND</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">XAS TRANSFER</td>
+<td style="text-align:center">XAS转账</td>
+</tr>
+<tr>
+<td style="text-align:left">SIGNATURE</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">SETUP SECOND_PASSWORD</td>
+<td style="text-align:center">设置二级密码</td>
+</tr>
+<tr>
+<td style="text-align:left">DELEGATE</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">SECOND_PASSWORD</td>
+<td style="text-align:center">注册受托人</td>
+</tr>
+<tr>
+<td style="text-align:left">VOTE</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">VOTE FOR DELEGATE</td>
+<td style="text-align:center">给受托人投票</td>
+</tr>
+<tr>
+<td style="text-align:left">MULTI</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">MULTISIGNATURE</td>
+<td style="text-align:center">多重签名</td>
+</tr>
+<tr>
+<td style="text-align:left">DAPP</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">DAPP REGISTER</td>
+<td style="text-align:center">DAPP注册</td>
+</tr>
+<tr>
+<td style="text-align:left">IN_TRANSFER</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">DAPP DEPOSIT</td>
+<td style="text-align:center">DAPP充值,把资产从主链转入到DAPP上</td>
+</tr>
+<tr>
+<td style="text-align:left">OUT_TRANSFER</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">DAPP WITHDRAW</td>
+<td style="text-align:center">DAPP提币,把资产从DAPP转出到主链上</td>
+</tr>
+<tr>
+<td style="text-align:left">STORAGE</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">UPLOAD STORAGE</td>
+<td style="text-align:center">小文件存储上传到区块链</td>
+</tr>
+<tr>
+<td style="text-align:left">UIA_ISSUER</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">UIA ISSUER REGISTER</td>
+<td style="text-align:center">用户自定义资产发行商注册</td>
+</tr>
+<tr>
+<td style="text-align:left">UIA_ASSET</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">UIA ASSET REGISTER</td>
+<td style="text-align:center">用户自定义资产注册</td>
+</tr>
+<tr>
+<td style="text-align:left">UIA_FLAGS</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">UIA FLAGS UPDATE</td>
+<td style="text-align:center">用户自定义资产旗标更新</td>
+</tr>
+<tr>
+<td style="text-align:left">UIA_ACL</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">UIA ACL UPDATE</td>
+<td style="text-align:center">用户自定义资产访问控制列表更新</td>
+</tr>
+<tr>
+<td style="text-align:left">UIA_ISSUE</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">UIA ISSUE</td>
+<td style="text-align:center">用户自定义资产发行</td>
+</tr>
+<tr>
+<td style="text-align:left">UIA_TRANSFER</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">UIA TRANSFER</td>
+<td style="text-align:center">用户自定义资产转账</td>
+</tr>
+<tr>
+<td style="text-align:left">LOCK</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">ACCOUNT LOCK</td>
+<td style="text-align:center">账户锁仓</td>
+</tr>
+</tbody>
+</table>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="https://github.com/AschPlatform/asch/blob/master/docs/asch_http_interface.md" target="_blank" rel="noopener">ASCH HTTP API文档</a></li>
 </ol>
