@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ruihou Blog">
 <meta property="og:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T08:42:30.535Z">
+<meta property="og:updated_time" content="2018-05-17T08:46:23.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asch开发日志 0x04 --- ASCH HTTP API文档">
 <meta name="twitter:description" content="几个重要参数测试网络地址 testnet:http://localnet:4096 dapp id号 id = cb0535f30bc8ca3128349702d45d5aa704453d1fc6704771122f1c99f7267f43 创世账号 1234genisis account[ &amp;#123; address: &apos;AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS&apos;,">
@@ -395,7 +395,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,073
+                  2,114
                 </span>
               
 
@@ -626,7 +626,8 @@ hello world.\n
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"success"</span>:<span class="literal">true</span>,</span><br><span class="line">    <span class="string">"id"</span>:<span class="string">"3bb763567c88e33a0b31f4d7f04c223408d7d139381141e14a3322c8b3f268cc"</span>,</span><br><span class="line">    <span class="string">"height"</span>:<span class="string">"18428"</span>,</span><br><span class="line">    <span class="string">"blockId"</span>:<span class="string">"ec46f9d759ce3e7bc895617a6ec8ef65fc20c7a799dadf71a7fee6f7e45a837d"</span>,</span><br><span class="line">    <span class="string">"type"</span>:8,</span><br><span class="line">    <span class="string">"timestamp"</span>:59482312,</span><br><span class="line">    <span class="string">"senderPublicKey"</span>:<span class="string">"ec806a8d6661c67291a07eac104f851aa58aff13ed6ae6e26deaeed20960f825"</span>,<span class="string">"senderId"</span>:<span class="string">"AK4ChqFGk8sKkK1T9GqvEDK9QgAejknHGS"</span>,</span><br><span class="line">    <span class="string">"recipientId"</span>:<span class="string">""</span>,<span class="string">"</span></span><br><span class="line"><span class="string">    "</span>amount<span class="string">":0,</span></span><br><span class="line"><span class="string">    "</span>fee<span class="string">":10000000,</span></span><br><span class="line"><span class="string">    "</span>signature<span class="string">":"</span>aac9675f760f4b14475eb4cda744683babb9bc40110479d2c1f2538b2e15671092bb73a03f26426ae34b1f86aab2a796c3fe99c493450105b8b1978b31bdeb06<span class="string">",</span></span><br><span class="line"><span class="string">    "</span>signSignature<span class="string">":"</span>f09c027024b2adf61fc4b71a69f5e56f86d54feb21b0a9cd726fa8962fe9d5b875192c692842b541cbfda662185dc78d4f9305c065f69479b8ef0281589a7009<span class="string">",</span></span><br><span class="line"><span class="string">    "</span>signatures<span class="string">":null,</span></span><br><span class="line"><span class="string">    "</span>confirmations<span class="string">":"</span>17<span class="string">",</span></span><br><span class="line"><span class="string">    "</span>args<span class="string">":null,</span></span><br><span class="line"><span class="string">    "</span>asset<span class="string">":&#123;"</span>storage<span class="string">":&#123;"</span>content<span class="string">":"</span>68656c6c6f20776f726c642e0a<span class="string">"&#125;&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 <h1 id="一点想象空间"><a href="#一点想象空间" class="headerlink" title="一点想象空间"></a>一点想象空间</h1><ul>
 <li>存储的数据<code>存储storages</code>,这个接口是不是可以搭建chat room？</li>
-<li>如果可以，我应该定义什么样的modle，什么样的data structure, 什么样的contracts？</li>
+<li>如果可以，后端我应该定义什么样的modle，什么样的data structure, 什么样的contracts？</li>
+<li>一当定制好后端，感觉前端主要的工具应该使用提供的<a href="https://github.com/AschPlatform/asch/blob/master/docs/asch_http_interface.md" target="_blank" rel="noopener">ASCH HTTP API文档</a>做查询queury，这个前端没经验啊？</li>
 <li>可不可以考虑加密传输，即已经知道了聊天对象的公钥PublicKey，加密message，只有私钥可以正确解密？</li>
 <li>可不可以使用<code>recipientId</code>这个字段来指定聊天对象？</li>
 <li>免费聊天，<code>fee</code>这个字段是可以设置为0的，但我不知道还需要其他的设置不？</li>
@@ -967,7 +968,7 @@ hello world.\n
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">10.1k</span>
+    <span title="Site words total count">10.2k</span>
   
 </div>
 
