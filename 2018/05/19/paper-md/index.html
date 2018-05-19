@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="blockchain," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="区块链文章集锦区块链文章整理一下，大势所趋。 Table of Contents General EUROCRYPT2018 Consensus Cryptography Block generation parameters Stake Attacks Wallets Crime Economics Marketplaces and Trust Privacy Sidechains, Highe">
+<meta name="keywords" content="blockchain">
+<meta property="og:type" content="article">
+<meta property="og:title" content="paper.md">
+<meta property="og:url" content="http://ruihou.me/2018/05/19/paper-md/index.html">
+<meta property="og:site_name" content="Ruihou Blog">
+<meta property="og:description" content="区块链文章集锦区块链文章整理一下，大势所趋。 Table of Contents General EUROCRYPT2018 Consensus Cryptography Block generation parameters Stake Attacks Wallets Crime Economics Marketplaces and Trust Privacy Sidechains, Highe">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-19T05:21:11.099Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="paper.md">
+<meta name="twitter:description" content="区块链文章集锦区块链文章整理一下，大势所趋。 Table of Contents General EUROCRYPT2018 Consensus Cryptography Block generation parameters Stake Attacks Wallets Crime Economics Marketplaces and Trust Privacy Sidechains, Highe">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ruihou.me/2018/05/19/paper-md/"/>
+
+
+
+
+
+  <title>paper.md | Ruihou Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ruihou Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个逐渐脱离高级趣味的油腻程序猿</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ruihou.me/2018/05/19/paper-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RuiHou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p8hu3ca6r.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180512001240.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruihou Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">paper.md</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T13:18:30+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Paper/" itemprop="url" rel="index">
+                    <span itemprop="name">Paper</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/19/paper-md/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/19/paper-md/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3,253
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  17
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="区块链文章集锦"><a href="#区块链文章集锦" class="headerlink" title="区块链文章集锦"></a>区块链文章集锦</h1><p>区块链文章整理一下，大势所趋。</p>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ol>
+<li><a href="#general">General</a></li>
+<li><a href="#eurocrypt2018">EUROCRYPT2018</a></li>
+<li><a href="#consensus">Consensus</a></li>
+<li><a href="#cryptography">Cryptography</a></li>
+<li><a href="#block-generation-parameters">Block generation parameters</a></li>
+<li><a href="#stake">Stake</a></li>
+<li><a href="#attacks">Attacks</a></li>
+<li><a href="#wallets">Wallets</a></li>
+<li><a href="#crime">Crime</a></li>
+<li><a href="#economics">Economics</a></li>
+<li><a href="#marketplaces-and-trust">Marketplaces and Trust</a></li>
+<li><a href="#privacy">Privacy</a></li>
+<li><a href="#sidechains-higher-layer-and-scalability">Sidechains, Higher layer and Scalability</a></li>
+<li><a href="#fungibility">Fungibility</a></li>
+<li><a href="#network">Network</a></li>
+<li><a href="#smart-contracts">Smart Contracts</a></li>
+<li><a href="#formal-methods">Formal Methods</a></li>
+<li><a href="#proof-of-work">Proof of work</a></li>
+<li><a href="#survey-sociological--anthropological">Survey, Sociological &amp; Anthropological</a></li>
+<li><a href="#applications">Applications</a></li>
+</ol>
+<hr>
+<h2 id="General"><a href="#General" class="headerlink" title="General"></a>General</h2><ul>
+<li><strong><a href="https://bitcoin.com/bitcoin.pdf" target="_blank" rel="noopener">Bitcoin: A Peer-to-Peer Electronic Cash System</a></strong>. Nakamoto S. ‘08.</li>
+<li><strong><a href="http://www.jbonneau.com/doc/BMCNKF15-IEEESP-bitcoin.pdf" target="_blank" rel="noopener">SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies</a></strong>. Bonneau J, Miller A, Clark J, Narayanan A, Kroll JA, Felten EW. S&amp;P ‘15.</li>
+</ul>
+<h2 id="eurocrypt2018"><a href="#eurocrypt2018" class="headerlink" title="eurocrypt2018"></a>eurocrypt2018</h2><ul>
+<li><p><strong><a href="https://eprint.iacr.org/2018/183.pdf" target="_blank" rel="noopener">Simple Proofs of Sequential Work</a></strong><br>简单的连续工作证明<br>Krzysztof Pietrzak，密码学家、奥地利科学与技术学院研究员。Bram Cohen，BitTorrent创始人、Chia CEO</p>
+<p>作者试图通过「空间证明」（Proof of Space）来保证比特币及其他加密货币的安全。「空间证明」是Bram Cohen之前提出的一种取代PoW的工作证明方式。</p>
+</li>
+<li><p><strong><a href="https://eprint.iacr.org/2017/913.pdf" target="_blank" rel="noopener">Thunderella: Blockchains with Optimistic Instant Confirmation</a></strong><br>Thunderella：区块链理想条件下的瞬间确认<br>Rafael Pass，康奈尔大学计算机科学系副教授</p>
+<p>作者介绍了一个全新的算法叫做「Thunderella」。与一般状态机的共识原理不同（状态机相当于一个共识机制的抽象，对分布式网络中大量节点的请求进行确认），Thunderella使得状态机可以在实现快速异步处理的同时，在异常时还可以启动回滚机制。如此一来，状态机的相应速度与同步协议无异，在不出现「拜占庭将军问题」（及大多数人都是诚实的）的情况下，可以做到对交易的瞬间响应。这篇论文中，作者对POW协议下，无需许可和需要许可的设定，提供了一些示例，相应速度可以达到正常上网的体验。不过正如上面所说，这一算法的前提条件是网络中的大部分节点或算力是诚实的，而这里所说的「大部分」指的是不能低于3/4。</p>
+</li>
+<li><p><a href="https://eprint.iacr.org/2018/138.pdf" target="_blank" rel="noopener">But Why Does it Work？A Rational Protocol Design Treatment of Bitcoin?</a><br>比特币为什么靠得住？关于比特币的理性协议的设计<br>Vassilis Zikas，英国爱丁堡大学区块链技术实验室副主任、副教授</p>
+<p>作者试图通过实验来验证RPD（Rational Protocol Design）框架作为一个「理性的密码学框架」在比特币分析中的可用性。众所周知，比特币交易的前提是默认大部分算力（矿工）是诚实的，然而在现实世界中，如何向公众证明大多数人是诚实的却是个难题。在这篇文章中，作者通过对RPD框架部署了一套新的机制，结果显示无论是对矿工添加新的区块进行奖励，还是让他们对挖矿付出代价，诚实的节点总是占大多数。这一结果跟币圈一直以来「矿工总是追求利益最大化」的论调相去甚远。这篇论文的价值在于，由于比特币交易流程的特殊性，以往密码学家没有一个关于合约是如何工作的常用的模型，需要各自开发安全等级上非常过硬的共识算法。这篇文章却改变了这一现状。</p>
+</li>
+<li><p><a href="https://eprint.iacr.org/2017/573.pdf" target="_blank" rel="noopener">Ouroboros Praos: An adaptively-secure, semi-synchronous proof-of-stake blockchain</a><br>一条自适应安全和半同步POS的区块链 Peter Gaži，IOHK研究员</p>
+<p>作者提出了一个新的POS协议——Ouroboros Praos，这个协议可以看作是，针对IOHK之前发布的公链Cardano的升级算法。这一算法第一次实现了半同步条件下对完全自适应腐败（fully-adaptive corruption）的安全保护。尤其是比特币持有者以诚实者占大多数时，黑客可以随时随地对这些人进行「腐化」，这一协议保证了更安全的数字签名，以及对随机函数进行验证的新类别——在而已密钥的生成下，依然保持不可预测。不过，这个协议仅在随机预言机模型的标准加密假设中有效。</p>
+</li>
+<li><p><a href="https://eprint.iacr.org/2018/147.pdf" target="_blank" rel="noopener">Sustained Space Complexity</a><br>可持续空间模型<br>Jo¨el Alwen，奥地利科学与技术学院研究员</p>
+<p>MHF（Memory-hard functions）是一种函数，它的评测成本受存储成本所控制。在硬件设备（如FPGAs、ASICs）上对MHF进行评测，成本不比在x86设备上便宜。作者引入了一个叫做「持续内存机制」（Sustainedmemory Complexity）。这一机制在平行随机预言机中构建。通过<code>n</code>和<code>O</code>两个函数进行运算，其中<code>n</code>代表步骤，<code>O</code>代表存储，函数式为：<code>O(n/log(n))</code>。在每个步骤中，一条询问被放入随机预言机，其他算法也可以将其他随机询问放入随机预言机。其存储为：<code>Ω(n/log(n))</code> ，步骤为：<code>Ω(n)</code>。</p>
+</li>
+</ul>
+<h2 id="Consensus"><a href="#Consensus" class="headerlink" title="Consensus"></a>Consensus</h2><ul>
+<li><strong><a href="https://eprint.iacr.org/2014/765.pdf" target="_blank" rel="noopener">The Bitcoin Backbone Protocol: Analysis and Applications</a></strong>. Garay J, Kiayias A, Leonardos N. EUROCRYPT ‘15.</li>
+<li><a href="https://eprint.iacr.org/2016/1048.pdf" target="_blank" rel="noopener">The Bitcoin Backbone Protocol with Chains of Variable Difficulty</a>. Garay J. Kiayias A, Leonardos N. ‘16.</li>
+<li><a href="https://eprint.iacr.org/2016/454.pdf" target="_blank" rel="noopener">Analysis of the Blockchain Protocol in Asynchronous Networks</a>. Pass R, Seeman L, shelat a. EUROCRYPT ‘17.</li>
+<li><a href="https://eprint.iacr.org/2016/545.pdf" target="_blank" rel="noopener">On Trees, Chains and Fast Transactions in the Blockchain</a>. Kiayias A, Panagiotakos G. ‘16.</li>
+<li>“RSCoin”: <a href="https://arxiv.org/pdf/1505.06895.pdf" target="_blank" rel="noopener">Centrally banked cryptocurrencies</a>. Danezis G, Meiklejohn S. ‘15.</li>
+<li><a href="https://socrates1024.s3.amazonaws.com/consensus.pdf" target="_blank" rel="noopener">Anonymous Byzantine Consensus from Moderately-Hard Puzzles: A Model for Bitcoin</a>. Miller A, LaViola JJ Jr. ‘14.</li>
+</ul>
+<h2 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a>Cryptography</h2><ul>
+<li><a href="https://pdfs.semanticscholar.org/ebae/9c7d91ea8b6a987642040a2142cc5ea67f7d.pdf" target="_blank" rel="noopener">On Bitcoin as a public randomness source</a>. Bonneau J, Clark J, Goldfeder S. ‘15.</li>
+<li><a href="https://eprint.iacr.org/2014/796" target="_blank" rel="noopener">Distributed Cryptography Based on the Proofs of Work</a>. Andrychowicz M, and Dziembowski S. ‘14.</li>
+</ul>
+<h2 id="Block-generation-parameters"><a href="#Block-generation-parameters" class="headerlink" title="Block generation parameters"></a>Block generation parameters</h2><ul>
+<li><a href="https://eprint.iacr.org/2016/991.pdf" target="_blank" rel="noopener">Bootstrapping the Blockchain - Directly</a>. Garay JA, Kiayias A, Leonardos N, Panagiotakos G. ‘16.</li>
+<li><a href="https://pdfs.semanticscholar.org/7de8/ff6bb85a020aa96f62dd86233fe9416550f3.pdf" target="_blank" rel="noopener">Speed-Security Tradeoffs in Blockchain Protocols</a>. Kiayias A, Panagiotakos G. ‘15.</li>
+<li>“GHOST”: <a href="http://www.cs.huji.ac.il/~avivz/pubs/15/btc_ghost_full.pdf" target="_blank" rel="noopener">Secure High-Rate Transaction Processing in Bitcoin</a>. Sompolinsky Y, Zohar A. FC ‘15.</li>
+<li>“PHANTOM”: <a href="https://eprint.iacr.org/2018/104.pdf" target="_blank" rel="noopener">A Scalable BlockDAG protocol</a>. Sompolinsky Y, Zohar A. ‘18.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/paper_101.pdf" target="_blank" rel="noopener">Inclusive Block Chain Protocols</a>. Lewenberg Y, Sompolinsky Y, Zohar A. FC ‘15.</li>
+<li><a href="https://eprint.iacr.org/2016/555.pdf" target="_blank" rel="noopener">On the Security and Performance of Proof of Work Blockchains</a>. Gervais A, Karame GO, Wüst K, Glykantzis V, Ritzdorf H, Capkun S. CCS ‘16.</li>
+</ul>
+<h2 id="Stake"><a href="#Stake" class="headerlink" title="Stake"></a>Stake</h2><ul>
+<li><a href="https://pdfs.semanticscholar.org/1c14/549f7ba7d6a000d79a7d12255eb11113e6fa.pdf" target="_blank" rel="noopener">Ouroboros: A provably secure proof-of-stake blockchain protocol</a>. Kiayias A, Russell A, David B, Oliynykov R. ‘16.</li>
+<li><a href="https://arxiv.org/pdf/1607.01341.pdf" target="_blank" rel="noopener">ALGORAND: The Efficient and Democratic Ledger</a>. Micali S. ‘16.</li>
+<li>“ByzCoin”: <a href="https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_kokoris-kogias.pdf" target="_blank" rel="noopener">Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing</a>. Kogias EK, Jovanovic P, Gailly N, Khoffi I, Gasser L, Ford B. USENIX ‘16.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/BGM16.pdf" target="_blank" rel="noopener">Cryptocurrencies without Proof of Work</a>. Bentov I, Gabizon A, Mizrahi A. FC ‘16.</li>
+<li><a href="http://eprint.iacr.org/2017/573.pdf" target="_blank" rel="noopener">Ouroboros Praos: An adaptively-secure, semi-synchronous proof-of-stake protocol</a>. Bernardo D, Gazi P, Kiayias A, Russell A. Crypto ‘17.</li>
+</ul>
+<h2 id="Attacks"><a href="#Attacks" class="headerlink" title="Attacks"></a>Attacks</h2><ul>
+<li><strong>“Selfish Mining”: <a href="https://arxiv.org/pdf/1311.0243" target="_blank" rel="noopener">Majority Is Not Enough: Bitcoin Mining Is Vulnerable</a></strong>. Eyal I, Sirer EG. FC ‘14.</li>
+<li><strong><a href="https://arxiv.org/pdf/1312.7013.pdf" target="_blank" rel="noopener">Theoretical Bitcoin Attacks with less than Half of the Computational Power</a></strong>. Bahack L. ‘13.</li>
+<li><a href="http://fc16.ifca.ai/preproceedings/30_Sapirshtein.pdf" target="_blank" rel="noopener">Optimal Selfish Mining Strategies in Bitcoin</a>. Sapirshtein A, Sompolinsky Y, Zohar A. FC ‘16.</li>
+<li><a href="http://fc16.ifca.ai/preproceedings/34_McCorry.pdf" target="_blank" rel="noopener">Refund attacks on Bitcoin’s Payment Protocol</a>. McCorry P, Shahandashti S, Hao F. FC ‘16.</li>
+</ul>
+<h2 id="Wallets"><a href="#Wallets" class="headerlink" title="Wallets"></a>Wallets</h2><ul>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/MES16.pdf" target="_blank" rel="noopener">Bitcoin Covenants</a>. Möser M, Eyal I, Sirer EG. FC ‘16.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final28.pdf" target="_blank" rel="noopener">Enhancing Bitcoin Transactions with Covenants</a>. O’Connor R, Piekarska M. FC ‘17.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/paper_15.pdf" target="_blank" rel="noopener">Hierarchical deterministic Bitcoin wallets that tolerate key leakage</a>. Gutoski G, Stebila D. FC ‘15.</li>
+</ul>
+<h2 id="Crime"><a href="#Crime" class="headerlink" title="Crime"></a>Crime</h2><ul>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_15.pdf" target="_blank" rel="noopener">ZombieCoin: Powering Next-Generation Botnets with Bitcoin</a>. Ali ST, McCorry P, Lee PH, Hao F. FC ‘15.</li>
+<li><a href="http://fc16.ifca.ai/preproceedings/36_Vasek.pdf" target="_blank" rel="noopener">The Bitcoin Brain Drain: A Short Paper on the Use and Abuse of Bitcoin Brain Wallets</a>. Vasek M, Bonneau J, Castellucci R, Keith C, Moore T. FC ‘16.</li>
+</ul>
+<h2 id="Economics"><a href="#Economics" class="headerlink" title="Economics"></a>Economics</h2><ul>
+<li><strong><a href="https://arxiv.org/pdf/1111.2626.pdf" target="_blank" rel="noopener">On Bitcoin and Red Balloons</a></strong>. Babaioff M, Dobzinski S, Oren S, Zohar A. EC ‘12.</li>
+<li><a href="http://www.cs.princeton.edu/~smattw/CKWN-CCS16.pdf" target="_blank" rel="noopener">On the instability of Bitcoin without the block reward</a>. Carlsten M, Kalodner H, Weinberg SM, Narayanan A. CCS ‘16.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_8.pdf" target="_blank" rel="noopener">Trends, Tips, Tolls: A Longitudinal Study of Bitcoin Transaction Fees</a>. Möser M, Böhme R. FC ‘15.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/Bon16b.pdf" target="_blank" rel="noopener">Why buy when you can rent? Bribery attacks on Bitcoin-style consensus</a>. Bonneau J. FC ‘16.</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_16.pdf" target="_blank" rel="noopener">Game-Theoretic Analysis of DDoS Attacks Against Bitcoin Mining Pools</a>. Johnson B, Laszka A, Grossklags J, Vasek M, Moore T. FC ‘14.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_13.pdf" target="_blank" rel="noopener">When Bitcoin Mining Pools Run Dry A Game-Theoretic Analysis of the Long-Term Impact of Attacks Between Mining Pools</a>. Laszka A, Johnson B, Grossklags J. FC ‘15.</li>
+<li><a href="http://fc16.ifca.ai/preproceedings/28_Schrijvers.pdf" target="_blank" rel="noopener">Incentive Compatibility of Bitcoin Mining Pool Reward Functions</a>. Schrijvers O, Bonneau J, Boneh D, Roughgarden T. FC ‘16.</li>
+<li><a href="http://fc16.ifca.ai/preproceedings/29_Teutsch.pdf" target="_blank" rel="noopener">When cryptocurrencies mine their own business</a>. Teutsch J, Jain S, Saxena P. FC ‘16.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final26.pdf" target="_blank" rel="noopener">Incentivizing Blockchain Forks via Whale Transactions</a>. Liao K, Katz J. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final38.pdf" target="_blank" rel="noopener">Smart Contracts Make Bitcoin Mining Pools Vulnerable</a>. Velner Y, Teutsch J, Luu L. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final40.pdf" target="_blank" rel="noopener">Mixing Coins of Different Quality: A Game-Theoretic Approach</a>. Abramova S, Schöttle P, Böhme R. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final29.pdf" target="_blank" rel="noopener">Decentralized Prediction Market without Arbiter</a>. Bentov I, Mizrahi A, Rosenfeld M. FC ‘17.</li>
+</ul>
+<h2 id="Marketplaces-and-Trust"><a href="#Marketplaces-and-Trust" class="headerlink" title="Marketplaces and Trust"></a>Marketplaces and Trust</h2><ul>
+<li><a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-soska-updated.pdf" target="_blank" rel="noopener">Measuring the Longitudinal Evolution of the Online Anonymous Marketplace Ecosystem</a>. Soska K, Christin N. USENIX ‘15.</li>
+<li><a href="http://www.jbonneau.com/doc/GBGN17-FC-physical_escrow.pdf" target="_blank" rel="noopener">Escrow protocols for cryptocurrencies: How to buy physical goods using Bitcoin</a>. Goldfeder S, Bonneau J, Gennaro R, Narayanan A. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/preproceedings/paper_37.pdf" target="_blank" rel="noopener">Trust Is Risk: A Decentralized Financial Trust Platform</a>. Thyfronitis Litos OS, Zindros D. FC ‘17.</li>
+<li><a href="http://dspace.lib.ntua.gr/bitstream/handle/123456789/43147/pseudonymous-trust-2.pdf?sequence=1" target="_blank" rel="noopener">Trust in decentralized anonymous marketplaces</a>. Zindros D. ‘15.</li>
+<li><a href="http://library.uniteddiversity.coop/Money_and_Economics/decentralizedcurrency.pdf" target="_blank" rel="noopener">Money as IOUs in social trust networks &amp; a proposal for a decentralized currency network protocol</a>. Fugger R. ‘04.</li>
+<li><a href="http://www.the-blockchain.com/docs/Ripple%20Consensus%20Whitepaper.pdf" target="_blank" rel="noopener">The Ripple protocol consensus algorithm</a>. Schwartz D, Youngs N, Britto A. ‘14.</li>
+<li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.696.93&amp;amp=&amp;rep=rep1&amp;amp=&amp;type=pdf" target="_blank" rel="noopener">The stellar consensus protocol: A federated model for internet-level consensus</a>. Mazières D. ‘15.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/paper_75.pdf" target="_blank" rel="noopener">There’s No Free Lunch, Even Using Bitcoin: Tracking the Popularity and Profits of Virtual Currency Scams</a>. Vasek M, Moore T. FC ‘15.</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_5.pdf" target="_blank" rel="noopener">Challenges and Opportunities Associated with a Bitcoin-based Transaction Rating System</a>. Vandervort D. FC ‘14.</li>
+</ul>
+<h2 id="Privacy"><a href="#Privacy" class="headerlink" title="Privacy"></a>Privacy</h2><ul>
+<li><a href="http://ieeexplore.ieee.org/iel7/6547086/6547088/06547123.pdf" target="_blank" rel="noopener">Zerocoin: Anonymous distributed e-cash from bitcoin</a>. Miers I, Garman C, Green M, Rubin AD. S&amp;P ‘13.</li>
+<li><a href="http://ieeexplore.ieee.org/iel7/6954656/6956545/06956581.pdf" target="_blank" rel="noopener">Zerocash: Decentralized anonymous payments from bitcoin</a>. Sasson EB, Chiesa A, Garman C, Green M, Miers I, Tromer E, Virza M. S&amp;P ‘14.</li>
+<li>“Monero”: <a href="https://cryptonote.org/whitepaper.pdf" target="_blank" rel="noopener">CryptoNote v2.0</a>. Saberhagen N. ‘13?</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_12.pdf" target="_blank" rel="noopener">Rational Zero: Economic Security for Zerocoin with Everlasting Anonymity</a>. Garman C, Green M, Miers I, Rubin A. FC ‘14.</li>
+<li><a href="https://eprint.iacr.org/2014/077.pdf" target="_blank" rel="noopener">Mixcoin: Anonymity for bitcoin with accountable mixes</a>. Bonneau J, Narayanan A, Miller A, Clark J, Kroll JA, Felten EW. ‘14.</li>
+<li><a href="https://pdfs.semanticscholar.org/a4ce/62a44770a33d1a19b5553f080d4f12e9e55d.pdf" target="_blank" rel="noopener">TumbleBit: An untrusted Bitcoin-compatible anonymous payment hub</a>. Heilman E, Alshenibr L, Baldimtsi F, Scafuro A, Goldberg S. ‘16.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/HBG16.pdf" target="_blank" rel="noopener">Blindly Signed Contracts: Anonymous On-Blockchain and Off-Blockchain Bitcoin Transactions</a>. Heilman E, Baldimtsi F, Goldberg S. FC ‘16.</li>
+<li><a href="http://crypsys.mmci.uni-saarland.de/projects/CoinShuffle/coinshuffle.pdf" target="_blank" rel="noopener">Coinshuffle: Practical decentralized coin mixing for bitcoin</a>. Ruffing T, Moreno-Sanchez P, Kate A. ESORICS ‘14.</li>
+<li><a href="https://eprint.iacr.org/2012/584.pdf" target="_blank" rel="noopener">Quantitative analysis of the full bitcoin transaction graph</a>. Ron D, Shamir A. FC ‘13.</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_2.pdf" target="_blank" rel="noopener">How Did Dread Pirate Roberts Acquire and Protect His Bitcoin Wealth?</a>. Ron D, Shamir A. FC ‘14.</li>
+<li>“MoneroLink”: <a href="http://monerolink.com/monerolink.pdf" target="_blank" rel="noopener">An Empirical Analysis of Linkability in the Monero Blockchain</a>. Miller A, Möser M, Lee K, Narayanan A. ‘17.</li>
+<li><a href="https://eprint.iacr.org/2015/1008.pdf" target="_blank" rel="noopener">Provisions: Privacy-preserving proofs of solvency for Bitcoin exchanges</a>. Dagher GG, Bünz B, Bonneau J, Clark J, Boneh D. CCS ‘15.</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_19.pdf" target="_blank" rel="noopener">Increasing Anonymity in Bitcoin</a>. Saxena A, Misra J, Dhar A. FC ‘14.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_3.pdf" target="_blank" rel="noopener">Blindcoin Blinded, Accountable Mixes for Bitcoin</a>. Valenta L, Rowan B. FC ‘15.</li>
+<li><a href="https://eprint.iacr.org/2015/675.pdf" target="_blank" rel="noopener">Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts</a>. Kosba A, Miller A, Shi E, Wen Z, Papamanthou C. SP ‘16</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final11.pdf" target="_blank" rel="noopener">Could Network Information Facilitate Address Clustering in Bitcoin?</a>. Neudecker T, Hartenstein H. FC ‘17.</li>
+<li><a href="http://blog.koehntopp.de/uploads/Chaum.BlindSigForPayment.1982.PDF" target="_blank" rel="noopener">Blind signatures for untraceable payments</a>. Chaum D. CRYPTO ‘83.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final17.pdf" target="_blank" rel="noopener">Exchange Pattern Mining in the Bitcoin Transaction Directed Hypergraph</a>. Ranshous S, Joslyn A, Kreyling S, Nowak K, Samatova N, West C, Winters C. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final41.pdf" target="_blank" rel="noopener">Confidential Assets</a>. Poelstra A, Back A, Friedenbach M, Maxwell G, Wuille P. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final6.pdf" target="_blank" rel="noopener">Mixing Confidential Transactions: Comprehensive Transaction Privacy for Bitcoin</a>. Ruffing T, Moreno-Sanchez P. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final23.pdf" target="_blank" rel="noopener">Switch Commitments: A Safety Switch for Confidential Transactions</a>. Ruffing T, Malavolta G. FC ‘17.</li>
+<li><a href="https://www.martinhenze.de/wp-content/papercite-data/pdf/zgh+15.pdf" target="_blank" rel="noopener">CoinParty: Secure Multi-Party Mixing of Bitcoins</a>. Ziegeldorf, J.H., Grossmann, F., Henze, M., Inden, N. and Wehrle, K. CODASPY ‘15.</li>
+</ul>
+<h2 id="Sidechains-Higher-layer-and-Scalability"><a href="#Sidechains-Higher-layer-and-Scalability" class="headerlink" title="Sidechains, Higher layer and Scalability"></a>Sidechains, Higher layer and Scalability</h2><ul>
+<li><a href="http://newspaper23.com/ripped/2014/11/http-_____-___-_www___-blockstream___-com__-_sidechains.pdf" target="_blank" rel="noopener">Enabling Blockchain Innovations with Pegged Sidechains</a>. Back A, Corallo M, Dashjr L, Friedenbach M, Maxwell G, Miller A, Poelstra A, Timón J, Wuille P. ‘14.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/KLS16.pdf" target="_blank" rel="noopener">Proofs of Proofs of Work with Sublinear Complexity</a>. Kiayias A, Lamprou N, Stouka AP. FC ‘16.</li>
+<li><a href="https://pdfs.semanticscholar.org/c8d2/b0c1f9b1ca739c340e9dc4a2ff71b5bfbb2e.pdf" target="_blank" rel="noopener">A Fast and Scalable Payment Network with Bitcoin Duplex Micropayment Channels</a>. Decker C, Wattenhofer R. SSS ‘15.</li>
+<li><a href="https://www.weusecoins.com/assets/pdf/library/Lightning%20Network%20Whitepaper.pdf" target="_blank" rel="noopener">The bitcoin lightning network: Scalable off-chain instant payments</a>. Poon J, Dryja T. ‘15.</li>
+<li>“Deployable Lightning”: <a href="https://github.com/ElementsProject/lightning/raw/master/doc/deployable-lightning.pdf" target="_blank" rel="noopener">Reaching The Ground With Lightning</a>. Russell R. ‘15.</li>
+<li><a href="https://www.usenix.org/system/files/conference/nsdi16/nsdi16-paper-eyal.pdf" target="_blank" rel="noopener">Bitcoin-NG: A Scalable Blockchain Protocol</a>. Eyal I, Gencer AE, Sirer EG, Van Renesse R. USENIX ‘16.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_9.pdf" target="_blank" rel="noopener">On the Malleability of Bitcoin Transactions</a>. Andrychowicz M, Dziembowski S, Malinowski D, Mazurek Ł. FC ‘15.</li>
+<li><a href="https://arxiv.org/pdf/1612.07766" target="_blank" rel="noopener">Teechan: Payment Channels Using Trusted Execution Environments</a>. Lind J, Eyal I, Pietzuch P, Sirer EG. FC ‘17.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/CDE+16.pdf" target="_blank" rel="noopener">On Scaling Decentralized Blockchains</a>. Croman K, Decker C, Eyal I, Gencer AE, Juels A, Kosba A, Miller A, Saxena P, Shi E, Sirer EG, Song D. FC ‘16.</li>
+<li>“Elastico”: <a href="https://pdfs.semanticscholar.org/4ab6/b28bb3342cb4f65555a37418b6a25297425e.pdf" target="_blank" rel="noopener">A secure sharding protocol for open blockchains</a>. Luu L, Narayanan V, Zheng C, Baweja K, Gilbert S, Saxena P. CCS ‘16.</li>
+<li><a href="http://fc17.ifca.ai/preproceedings/paper_34.pdf" target="_blank" rel="noopener">Improving Authenticated Dynamic Dictionaries, with Applications to Cryptocurrencies</a>. Reyzin L, Meshkov D, Chepurnoy A, Ivanov S. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/preproceedings/paper_73.pdf" target="_blank" rel="noopener">Service-Oriented Sharding for Blockchains</a>. Gencer AE, Van Renesse R, Sirer EG. FC ‘17.</li>
+<li><a href="https://eprint.iacr.org/2017/823.pdf" target="_blank" rel="noopener">Revive: Rebalancing Off-Blockchain Payment Networks</a>. Khalil, R., &amp; Gervais, A. CCS ‘17.</li>
+<li><a href="https://eprint.iacr.org/2017/963.pdf" target="_blank" rel="noopener">Non-Interactive Proofs of Proof-of-Work</a>. Aggelos K, Andrew M, Dionysis Z. ‘17</li>
+</ul>
+<h2 id="Fungibility"><a href="#Fungibility" class="headerlink" title="Fungibility"></a>Fungibility</h2><ul>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_15.pdf" target="_blank" rel="noopener">Towards Risk Scoring of Bitcoin Transactions</a>. Möser M, Böhme R, Breuker D. FC ‘14.</li>
+</ul>
+<h2 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h2><ul>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_3.pdf" target="_blank" rel="noopener">The Bitcoin P2P network</a>. Donet Donet JA, Perez-Sola C, Herrera-Joancomart J. FC ‘14.</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_17.pdf" target="_blank" rel="noopener">Empirical Analysis of Denial-of-Service Attacks in the Bitcoin Ecosystem</a>. Vasek M, Thornton M, Moore T. FC ‘14.</li>
+<li><a href="https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-heilman.pdf" target="_blank" rel="noopener">Eclipse Attacks on Bitcoin’s Peer-to-Peer Network</a>. Heilman E, Kendler A, Zohar A, Goldberg S. USENIX ‘15.</li>
+<li><a href="https://arxiv.org/pdf/1605.07524v2" target="_blank" rel="noopener">Hijacking Bitcoin: Routing Attacks on Cryptocurrencies</a>. Apostolaki M, Zohar A, Vanbever L. S&amp;P ‘17.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/BHMW16.pdf" target="_blank" rel="noopener">Stressing Out: Bitcoin “Stress Testing”</a>. Baqer K, Yuxing Huang D, McCoy D, Weaver N. FC ‘16.</li>
+<li><a href="https://infoscience.epfl.ch/record/222858/files/199.pdf" target="_blank" rel="noopener">The Honey Badger of BFT Protocols</a>. Miller A, Xia Y, Croman K, Shi E, Song D. CCS ‘16.</li>
+</ul>
+<h2 id="Smart-Contracts"><a href="#Smart-Contracts" class="headerlink" title="Smart Contracts"></a>Smart Contracts</h2><ul>
+<li>“Ethereum”: <a href="https://www.weusecoins.com/assets/pdf/library/Ethereum_white_paper-a_next_generation_smart_contract_and_decentralized_application_platform-vitalik-buterin.pdf" target="_blank" rel="noopener">A next-generation smart contract and decentralized application platform</a>. Vitalik Buterin. ‘14.</li>
+<li><a href="http://gavwood.com/paper.pdf" target="_blank" rel="noopener">Ethereum: A secure decentralised generalised transaction ledger</a>. Wood G. ‘14.</li>
+<li><a href="http://fc14.ifca.ai/bitcoin/papers/bitcoin14_submission_10.pdf" target="_blank" rel="noopener">Fair Two-Party Computations via Bitcoin Deposits</a>. Andrychowicz M, Dziembowski S, Malinowski D, Mazurek Ł. FC ‘14.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/DAKMS16.pdf" target="_blank" rel="noopener">Step by Step Towards Creating a Safe Smart Contract: Lessons and Insights from a Cryptocurrency Lab</a>. Delmolino K, Arnett M, Kosba A, Miller A, Shi E. FC ‘16.</li>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/Bon16a.pdf" target="_blank" rel="noopener">EthIKS: Using Ethereum to audit a CONIKS key transparency log</a>. Bonneau J. FC ‘16.</li>
+<li>“Oyente”: <a href="https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf" target="_blank" rel="noopener">Making Smart Contracts<br>Smarter</a>. Luu L, Chu DH, Olickel H, Saxena P, Hobor A. CCS ‘16.</li>
+<li><a href="http://www.initc3.org/files/Gyges.pdf" target="_blank" rel="noopener">The Ring of Gyges: Investigating the Future of Criminal Smart Contracts</a>. Juels A, Kosba A, Shi E. CCS ‘16.</li>
+<li><a href="http://delivery.acm.org/10.1145/2980000/2978326/p270-zhang.pdf?ip=46.176.188.9&amp;id=2978326&amp;acc=OA&amp;key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E594C525CFFA2AFAF&amp;CFID=923932938&amp;CFTOKEN=56121949&amp;__acm__=1492299159_38039f3afa858f241818fdcf190e0200" target="_blank" rel="noopener">Town crier: An authenticated data feed for smart contracts</a>. Zhang F, Cecchetti E, Croman K, Juels A, Shi E. CCS ‘16.</li>
+<li><a href="http://fc17.ifca.ai/preproceedings/paper_80.pdf" target="_blank" rel="noopener">A Smart Contract for Boardroom Voting with Maximum Voter Privacy</a>. McCorry P, Shahandashti SF, Hao F. FC ‘17.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final39.pdf" target="_blank" rel="noopener">Constant-deposit multiparty lotteries on Bitcoin</a>. Bartoletti M, Zunino R. FC ‘17.</li>
+</ul>
+<h2 id="Formal-Methods"><a href="#Formal-Methods" class="headerlink" title="Formal Methods"></a>Formal Methods</h2><ul>
+<li><a href="http://fc16.ifca.ai/bitcoin/papers/TVR16.pdf" target="_blank" rel="noopener">Automated Verification of Electrum Wallet</a>. Turuani M, Voegtlin T, Rusinowitch M. FC ‘16.</li>
+</ul>
+<h2 id="Proof-of-work"><a href="#Proof-of-work" class="headerlink" title="Proof of work"></a>Proof of work</h2><ul>
+<li>“Proof-of-work”: <a href="https://web.cs.dal.ca/~abrodsky/7301/readings/DwNa93.pdf" target="_blank" rel="noopener">Pricing via processing or combatting junk mail</a>. Dwork C, Naor M. ‘92.</li>
+<li><a href="http://www.hashcash.org/papers/hashcash.pdf" target="_blank" rel="noopener">Hashcash - A Denial of Service Counter-Measure</a>. Back A. ‘02.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_12.pdf" target="_blank" rel="noopener">Cuckoo Cycle: a memory bound graph-theoretic proof-of-work</a>. Tromp J. FC ‘15.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final24.pdf" target="_blank" rel="noopener">PieceWork: Generalized Outsourcing Control for Proofs of Work</a>. Daian P, Eyal I, Juels A, Sirer EG. FC ‘17.</li>
+<li><a href="http://ieeexplore.ieee.org/iel7/6954656/6956545/06956582.pdf" target="_blank" rel="noopener">Permacoin: Repurposing bitcoin work for data preservation</a>. Miller A, Juels A, Shi E, Parno B, Katz J. Permacoin. S&amp;P ‘14.</li>
+</ul>
+<h2 id="Survey-Sociological-amp-Anthropological"><a href="#Survey-Sociological-amp-Anthropological" class="headerlink" title="Survey, Sociological &amp; Anthropological"></a>Survey, Sociological &amp; Anthropological</h2><ul>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_2.pdf" target="_blank" rel="noopener">Issues in Designing a Bitcoin-Like Community Currency</a>. Vandervort D, Gaucas D, St Jacques R. FC ‘15.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_14.pdf" target="_blank" rel="noopener">The Bitcoin Market Potential Index</a>. Hileman G. FC ‘15.</li>
+<li><a href="http://fc15.ifca.ai/preproceedings/bitcoin/paper_16.pdf" target="_blank" rel="noopener">Cryptographic Currencies from a Tech-Policy Perspective: Policy Issues and Technical Direction</a>. McReynolds E, Lerner A, Scott W, Roesner F, Kohno T. FC ‘15.</li>
+<li><a href="http://fc16.ifca.ai/preproceedings/33_Krombholz.pdf" target="_blank" rel="noopener">The Other Side of the Coin: User Experiences with Bitcoin Security and Privacy</a>. Krombholz K, Judmayer A, Gusenbauer M, Weippl E. FC ‘16.</li>
+<li><a href="http://fc17.ifca.ai/bitcoin/papers/bitcoin17-final32.pdf" target="_blank" rel="noopener">An analysis of Bitcoin OP_RETURN metadata</a>. Bartoletti M, Pompianu L. FC ‘17.</li>
+</ul>
+<h2 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h2><ul>
+<li><a href="https://blockstack.org/whitepaper.pdf" target="_blank" rel="noopener">Blockstack Technical Whitepaper</a>. Muneeb A., Ryan S., Jude N, Michael F. ‘17</li>
+<li><a href="https://storj.io/storj.pdf" target="_blank" rel="noopener">Storj A Peer-to-Peer Cloud Storage Network</a>. Shawn W., Tome B., Josh B.,James P., Gordon H., Patrick G., Philip H., Chris P. ‘16</li>
+<li><a href="https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf" target="_blank" rel="noopener">IPFS - Content Addressed, Versioned, P2P File System</a>. Benet J. ‘15</li>
+<li><a href="https://www.bigchaindb.com/whitepaper/bigchaindb-whitepaper.pdf" target="_blank" rel="noopener">BigchainDB: A Scalable Blockchain Database</a>. McConaghy T, Marques R, Müller A, De Jonghe D, McConaghy T, McMullen G, Henderson R, Bellemare S, Granzotto A. ‘17</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><p><a href="https://github.com/decrypto-org/blockchain-papers/blob/master/README.md" target="_blank" rel="noopener">decrypto-org/blockchain-papers</a></p>
+</li>
+<li><p><a href="https://github.com/blockchain-university/databank" target="_blank" rel="noopener">blockchain-university/databank</a></p>
+</li>
+<li><a href="https://github.com/mipengchong/blockchain-papers-1" target="_blank" rel="noopener">区块链论文、ICO白皮书</a></li>
+<li><p><a href="https://blog.csdn.net/qq_28455469/article/details/73368814" target="_blank" rel="noopener">区块链该看哪些会议论文</a></p>
+</li>
+<li><p><a href="https://github.com/LiuBoyu/blockchain" target="_blank" rel="noopener">区块链 - 中文资源</a></p>
+</li>
+<li><p><a href="https://kuaibao.qq.com/s/20180508A124ZN00?refer=spider" target="_blank" rel="noopener">区块链最新顶级论文曝光！来自欧密会上的5篇重磅，统统打包给你</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作，请我吃辣条吧！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://p8hu3ca6r.bkt.clouddn.com/%E8%B5%9E%E8%B5%8F%E7%A0%81.jpg" alt="RuiHou 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    RuiHou
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://ruihou.me/2018/05/19/paper-md/" title="paper.md">http://ruihou.me/2018/05/19/paper-md/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blockchain/" rel="tag"><i class="fa fa-tag"></i> blockchain</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/17/debug-20180517-md/" rel="next" title="Asch开发日志 0x04 --- ASCH HTTP API文档">
+                <i class="fa fa-chevron-left"></i> Asch开发日志 0x04 --- ASCH HTTP API文档
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://p8hu3ca6r.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180512001240.jpg"
+                alt="RuiHou" />
+            
+              <p class="site-author-name" itemprop="name">RuiHou</p>
+              <p class="site-description motion-element" itemprop="description">放荡不羁爱自由</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/houruixiang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mlscagroup@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.bilibili.com/" title="B站" target="_blank">B站</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="Github" target="_blank">Github</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.breathingearth.net/" title="Breathing Earth" target="_blank">Breathing Earth</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#区块链文章集锦"><span class="nav-number">1.</span> <span class="nav-text">区块链文章集锦</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-of-Contents"><span class="nav-number">1.1.</span> <span class="nav-text">Table of Contents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#General"><span class="nav-number">1.2.</span> <span class="nav-text">General</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eurocrypt2018"><span class="nav-number">1.3.</span> <span class="nav-text">eurocrypt2018</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Consensus"><span class="nav-number">1.4.</span> <span class="nav-text">Consensus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cryptography"><span class="nav-number">1.5.</span> <span class="nav-text">Cryptography</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Block-generation-parameters"><span class="nav-number">1.6.</span> <span class="nav-text">Block generation parameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stake"><span class="nav-number">1.7.</span> <span class="nav-text">Stake</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attacks"><span class="nav-number">1.8.</span> <span class="nav-text">Attacks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wallets"><span class="nav-number">1.9.</span> <span class="nav-text">Wallets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Crime"><span class="nav-number">1.10.</span> <span class="nav-text">Crime</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Economics"><span class="nav-number">1.11.</span> <span class="nav-text">Economics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Marketplaces-and-Trust"><span class="nav-number">1.12.</span> <span class="nav-text">Marketplaces and Trust</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Privacy"><span class="nav-number">1.13.</span> <span class="nav-text">Privacy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sidechains-Higher-layer-and-Scalability"><span class="nav-number">1.14.</span> <span class="nav-text">Sidechains, Higher layer and Scalability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fungibility"><span class="nav-number">1.15.</span> <span class="nav-text">Fungibility</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network"><span class="nav-number">1.16.</span> <span class="nav-text">Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Smart-Contracts"><span class="nav-number">1.17.</span> <span class="nav-text">Smart Contracts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formal-Methods"><span class="nav-number">1.18.</span> <span class="nav-text">Formal Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proof-of-work"><span class="nav-number">1.19.</span> <span class="nav-text">Proof of work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Survey-Sociological-amp-Anthropological"><span class="nav-number">1.20.</span> <span class="nav-text">Survey, Sociological &amp; Anthropological</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications"><span class="nav-number">1.21.</span> <span class="nav-text">Applications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.22.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">RuiHou</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">13.7k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'houruixiang',
+            repo: 'Gitment-comments',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '524a584b30f709c15915041c2b1ac463caa281a5',
+            
+                client_id: '7b1ea4ea581c631bdc07'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "middle";
+      
+          pbOptions.networks = "Weibo,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
