@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[http-protocol]]></title>
+    <title><![CDATA[浅浅到不能再浅的浅析HTTP]]></title>
     <url>%2F2018%2F05%2F22%2Fhttp-protocol%2F</url>
     <content type="text"><![CDATA[最近在搞Acsh平台下的Dapp，兜兜转转发现不就是写一个Web应用的前端嘛，然后我就开始了我的苦逼的前端的学习生涯。吾生也有涯而知无涯也。。。吐槽一句，前端真不是一个程序员干的活，这个东西太杂了，这个真的是太杂了，一星期内我接触了Html, CSS, JavaScript, jQuery, Ajax, JSON整个人像打鸡血了似的，晚上脑子沉沉的睡不着，这个真的太杂了，迟早要疯，那就早点浪起来。今天在来看看HTTP的请求与响应，天下文章一大抄，没啥好说的。 参考 asch_http_interface.md 详解HTTP GET请求 完整的HTTP请求会经历以下过程 浅谈HTTP中GET、POST用法以及它们的区别]]></content>
       <categories>
