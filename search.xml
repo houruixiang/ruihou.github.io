@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[深夜反思]]></title>
+    <url>%2F2018%2F07%2F11%2F%E6%B7%B1%E5%A4%9C%E5%8F%8D%E6%80%9D%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[2015年十大数字货币研究论文]]></title>
     <url>%2F2018%2F05%2F30%2Fpaper-2015-top%2F</url>
     <content type="text"><![CDATA[2015年十大数字货币研究论文 SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrenciess 建立“比特币首部系统性综述”。包括对文章评论，论文收集，整理和合并，完成了庞大的前期工作——从跨越三十年的学术来源，到IRC日志，论坛在线讨论和开发者邮件列表。他们确定的比特币设计的三大组成部分，并且单独进行分析，（1）交易和脚本，（2）共识和挖矿，（3）点对点通信网络。 Eclipse Attacks on Bitcoin’s Peer-to-Peer Network 攻击者垄断了受害者全部传入传出链接，将受害者从点对点网络中孤立。攻击者于是可以通过向受害者传输错误信息或抢占受害者的计算能力来实现不可告人的目的。https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman Does Governance Have a Role in Pricing? Cross-Country Evidence from Bitcoin Markets Robert Viglione通过统计学的方式，证明经济自由度与比特币溢价之间的反比关系。他的方法是代表了一种基于潜在市场——而不是经济学家定义的——衡量经济自由度，并且是实时更新，而不是按年来更新。这为我们某些项目的研究提供了数据，例如对于选举的市场预测。即使在早期期阶段，在价格波动阶段，比特币正在成为一种有用的宏观数据。 Bitcoin in Islamic Banking and Finance 考虑到穆斯林人群占有全球四分之一的人口，而且比特币是没有利息的，Charles W Evans教授认为这种硬通货币和伊斯兰教义兼容金融之间有很大的重叠空间，能够在两个社区之间建立一个沟通的学术桥梁. Bitcoin-NG: A Scalable Blockchain Protocol Bitcoin-NG是一种可以自由扩展的方案，采用了“微区块（micro blocks）”和“核心区块（key blocks）”的方式，能够在比特币目前的点对点通信网络中解决吞吐量和延迟的问题。除了通过使用大规模比特币网络模拟环境来测试该方案的性能之外，作者还提出了一些全新的指标，如共识延迟和挖矿利用率量化来监测区块链协议的安全和效率。 Should Cryptocurrencies be Included in the Portfolio of the International Reserves Held by the Central Bank of Barbados? 对于小岛国家，在持有的储备资产中配置一部分是比特币的话也许是有益的。适当的投资组合既能够提升收益，也能够通过多样性来降低投机损失，而不会显著影响准备金价值波动。 The bitcoin backbone protocol: Analysis and applications 提取和分析比特币协议的核心”，概括他们分析的主要是两种属性，称之为通用前缀（common prefix）和块链质量（chain quality）。通用前缀数量主要是指网络收敛在单一历史的能力，块链质量属性表示恶意实体能够获得超越其挖矿能力的优势。 The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments 闪电交易是一种正常的比特币交易，但是——除了极少数的情况——实际上并没有发布到区块链上。因为大量的交易数据是被存储在线下，闪电交易方式将会显著降低比特币交易成本，使其能够实现小额支付。 参考 2015年十大数字货币研究论文]]></content>
